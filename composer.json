@@ -39,7 +39,10 @@
     },
     "files": [
       "./support/helpers.php"
-    ]
+    ],
+    "psr-0": {
+        "": "extend/"
+    }
   },
   "scripts": {
     "post-package-install": [
