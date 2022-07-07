@@ -4,14 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0029710e2067007214a66be40554868",
+    "content-hash": "d35b4ec48af0891da722b021cd540a4d",
     "packages": [
         {
             "name": "gregwar/captcha",
             "version": "v1.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/Captcha.git",
+                "reference": "4bb668e6b40e3205a020ca5ee4ca8cff8b8780c5"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/gregwar/captcha/v1.1.9/gregwar-captcha-v1.1.9.zip",
+                "url": "https://api.github.com/repos/Gregwar/Captcha/zipball/4bb668e6b40e3205a020ca5ee4ca8cff8b8780c5",
                 "reference": "4bb668e6b40e3205a020ca5ee4ca8cff8b8780c5",
                 "shasum": ""
             },
@@ -30,6 +35,7 @@
                     "Gregwar\\": "src/Gregwar"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -51,14 +57,23 @@
                 "captcha",
                 "spam"
             ],
+            "support": {
+                "issues": "https://github.com/Gregwar/Captcha/issues",
+                "source": "https://github.com/Gregwar/Captcha/tree/master"
+            },
             "time": "2020-03-24T14:39:05+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
             "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "13388f00956b1503577598873fffb5ae994b5737"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/guzzlehttp/psr7/2.4.0/guzzlehttp-psr7-2.4.0.zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/13388f00956b1503577598873fffb5ae994b5737",
                 "reference": "13388f00956b1503577598873fffb5ae994b5737",
                 "shasum": ""
             },
@@ -91,6 +106,7 @@
                     "GuzzleHttp\\Psr7\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -142,14 +158,37 @@
                 "uri",
                 "url"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/2.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2022-06-20T21:43:11+00:00"
         },
         {
             "name": "ichynul/builder-mdeditor",
             "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/builder-mdeditor.git",
+                "reference": "ce51a036c81f824770aa1ce3c0a11139e5d0db5c"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/ichynul/builder-mdeditor/1.1.2/ichynul-builder-mdeditor-1.1.2.zip",
+                "url": "https://api.github.com/repos/hi-tpext/builder-mdeditor/zipball/ce51a036c81f824770aa1ce3c0a11139e5d0db5c",
                 "reference": "ce51a036c81f824770aa1ce3c0a11139e5d0db5c",
                 "shasum": ""
             },
@@ -162,6 +201,7 @@
                     "tpext\\builder\\mdeditor\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -176,14 +216,23 @@
             "keywords": [
                 "thinkphp"
             ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/builder-mdeditor/issues",
+                "source": "https://github.com/hi-tpext/builder-mdeditor/tree/1.1.2"
+            },
             "time": "2020-04-19T16:50:15+00:00"
         },
         {
             "name": "ichynul/lightyearadmin",
             "version": "1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/lightyearadmin.git",
+                "reference": "24d0cc8b27c8159bd116d57ab79a910546da5ada"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/ichynul/lightyearadmin/1.1.8/ichynul-lightyearadmin-1.1.8.zip",
+                "url": "https://api.github.com/repos/hi-tpext/lightyearadmin/zipball/24d0cc8b27c8159bd116d57ab79a910546da5ada",
                 "reference": "24d0cc8b27c8159bd116d57ab79a910546da5ada",
                 "shasum": ""
             },
@@ -196,6 +245,7 @@
                     "tpext\\lightyearadmin\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -210,15 +260,24 @@
             "keywords": [
                 "thinkphp"
             ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/lightyearadmin/issues",
+                "source": "https://github.com/hi-tpext/lightyearadmin/tree/1.1.8"
+            },
             "time": "2022-06-13T16:51:05+00:00"
         },
         {
             "name": "ichynul/tpext",
-            "version": "4.0.3",
+            "version": "4.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/tpext.git",
+                "reference": "b2c24c07b8abb283ef221355a00ee8d46a91ccb7"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/ichynul/tpext/4.0.3/ichynul-tpext-4.0.3.zip",
-                "reference": "22715b0b46f690fda73d08563db5b417e3db6c86",
+                "url": "https://api.github.com/repos/hi-tpext/tpext/zipball/b2c24c07b8abb283ef221355a00ee8d46a91ccb7",
+                "reference": "b2c24c07b8abb283ef221355a00ee8d46a91ccb7",
                 "shasum": ""
             },
             "require": {
@@ -226,7 +285,8 @@
                 "topthink/think-template": "^2.0",
                 "webman/event": "^1.0.2",
                 "webman/think-cache": "^1.0",
-                "webman/think-orm": "^1.0"
+                "webman/think-orm": "^1.0",
+                "workerman/webman-framework": "^1.3.19"
             },
             "type": "library",
             "autoload": {
@@ -238,6 +298,7 @@
                     "tpext\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -252,14 +313,23 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2022-07-05T09:55:13+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpext/issues",
+                "source": "https://github.com/hi-tpext/tpext/tree/4.0.5"
+            },
+            "time": "2022-07-06T15:16:47+00:00"
         },
         {
             "name": "ichynul/tpextbuilder",
             "version": "3.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/tpextbuilder.git",
+                "reference": "572780096015ad2aa7fe0fce908b62d836e33353"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/ichynul/tpextbuilder/3.7.2/ichynul-tpextbuilder-3.7.2.zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextbuilder/zipball/572780096015ad2aa7fe0fce908b62d836e33353",
                 "reference": "572780096015ad2aa7fe0fce908b62d836e33353",
                 "shasum": ""
             },
@@ -282,6 +352,7 @@
                     "tpext\\builder\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -296,14 +367,23 @@
             "keywords": [
                 "thinkphp"
             ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextbuilder/issues",
+                "source": "https://github.com/hi-tpext/tpextbuilder/tree/3.7.2"
+            },
             "time": "2022-07-03T09:01:10+00:00"
         },
         {
             "name": "ichynul/tpextmanager",
             "version": "3.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/tpextmanager.git",
+                "reference": "9e3648e43609a9e2d7a9db7ceda406903d62fe65"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/ichynul/tpextmanager/3.3.6/ichynul-tpextmanager-3.3.6.zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextmanager/zipball/9e3648e43609a9e2d7a9db7ceda406903d62fe65",
                 "reference": "9e3648e43609a9e2d7a9db7ceda406903d62fe65",
                 "shasum": ""
             },
@@ -326,6 +406,7 @@
                     "tpext\\manager\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -340,15 +421,24 @@
             "keywords": [
                 "thinkphp"
             ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextmanager/issues",
+                "source": "https://github.com/hi-tpext/tpextmanager/tree/3.3.6"
+            },
             "time": "2022-07-04T04:01:19+00:00"
         },
         {
             "name": "ichynul/tpextmyadmin",
-            "version": "4.0.3",
+            "version": "4.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/tpextmyadmin.git",
+                "reference": "fd61034bd406c2d080fcc4ca7d3db913611a6bb3"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/ichynul/tpextmyadmin/4.0.3/ichynul-tpextmyadmin-4.0.3.zip",
-                "reference": "3e0278c251791e6f7f4df38e443247aee39258ea",
+                "url": "https://api.github.com/repos/hi-tpext/tpextmyadmin/zipball/fd61034bd406c2d080fcc4ca7d3db913611a6bb3",
+                "reference": "fd61034bd406c2d080fcc4ca7d3db913611a6bb3",
                 "shasum": ""
             },
             "require": {
@@ -369,6 +459,7 @@
                     "tpext\\myadmin\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -383,14 +474,23 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2022-07-05T09:17:58+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextmyadmin/issues",
+                "source": "https://github.com/hi-tpext/tpextmyadmin/tree/4.0.5"
+            },
+            "time": "2022-07-06T03:28:20+00:00"
         },
         {
             "name": "intervention/image",
             "version": "2.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/image.git",
+                "reference": "04be355f8d6734c826045d02a1079ad658322dad"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/intervention/image/2.7.2/intervention-image-2.7.2.zip",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/04be355f8d6734c826045d02a1079ad658322dad",
                 "reference": "04be355f8d6734c826045d02a1079ad658322dad",
                 "shasum": ""
             },
@@ -427,6 +527,7 @@
                     "Intervention\\Image\\": "src/Intervention/Image"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -447,14 +548,33 @@
                 "thumbnail",
                 "watermark"
             ],
+            "support": {
+                "issues": "https://github.com/Intervention/image/issues",
+                "source": "https://github.com/Intervention/image/tree/2.7.2"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/interventionio",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Intervention",
+                    "type": "github"
+                }
+            ],
             "time": "2022-05-21T17:30:32+00:00"
         },
         {
             "name": "matthiasmullie/minify",
             "version": "1.3.68",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matthiasmullie/minify.git",
+                "reference": "c00fb02f71b2ef0a5f53fe18c5a8b9aa30f48297"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/matthiasmullie/minify/1.3.68/matthiasmullie-minify-1.3.68.zip",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/c00fb02f71b2ef0a5f53fe18c5a8b9aa30f48297",
                 "reference": "c00fb02f71b2ef0a5f53fe18c5a8b9aa30f48297",
                 "shasum": ""
             },
@@ -481,6 +601,7 @@
                     "MatthiasMullie\\Minify\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -501,14 +622,29 @@
                 "minifier",
                 "minify"
             ],
+            "support": {
+                "issues": "https://github.com/matthiasmullie/minify/issues",
+                "source": "https://github.com/matthiasmullie/minify/tree/1.3.68"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/matthiasmullie",
+                    "type": "github"
+                }
+            ],
             "time": "2022-04-19T08:28:56+00:00"
         },
         {
             "name": "matthiasmullie/path-converter",
             "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matthiasmullie/path-converter.git",
+                "reference": "e7d13b2c7e2f2268e1424aaed02085518afa02d9"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/matthiasmullie/path-converter/1.1.3/matthiasmullie-path-converter-1.1.3.zip",
+                "url": "https://api.github.com/repos/matthiasmullie/path-converter/zipball/e7d13b2c7e2f2268e1424aaed02085518afa02d9",
                 "reference": "e7d13b2c7e2f2268e1424aaed02085518afa02d9",
                 "shasum": ""
             },
@@ -525,6 +661,7 @@
                     "MatthiasMullie\\PathConverter\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -544,14 +681,23 @@
                 "paths",
                 "relative"
             ],
+            "support": {
+                "issues": "https://github.com/matthiasmullie/path-converter/issues",
+                "source": "https://github.com/matthiasmullie/path-converter/tree/1.1.3"
+            },
             "time": "2019-02-05T23:41:09+00:00"
         },
         {
             "name": "monolog/monolog",
             "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/monolog/monolog/2.7.0/monolog-monolog-2.7.0.zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5579edf28aee1190a798bfa5be8bc16c563bd524",
                 "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524",
                 "shasum": ""
             },
@@ -611,6 +757,7 @@
                     "Monolog\\": "src/Monolog"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -628,14 +775,33 @@
                 "logging",
                 "psr-3"
             ],
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/2.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2022-06-09T08:59:12+00:00"
         },
         {
             "name": "nikic/fast-route",
             "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/nikic/fast-route/v1.3.0/nikic-fast-route-v1.3.0.zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/181d480e08d9476e61381e04a71b34dc0432e812",
                 "reference": "181d480e08d9476e61381e04a71b34dc0432e812",
                 "shasum": ""
             },
@@ -654,6 +820,7 @@
                     "FastRoute\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -668,14 +835,23 @@
                 "router",
                 "routing"
             ],
+            "support": {
+                "issues": "https://github.com/nikic/FastRoute/issues",
+                "source": "https://github.com/nikic/FastRoute/tree/master"
+            },
             "time": "2018-02-13T20:26:39+00:00"
         },
         {
             "name": "opis/closure",
             "version": "3.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opis/closure.git",
+                "reference": "3d81e4309d2a927abbe66df935f4bb60082805ad"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/opis/closure/3.6.3/opis-closure-3.6.3.zip",
+                "url": "https://api.github.com/repos/opis/closure/zipball/3d81e4309d2a927abbe66df935f4bb60082805ad",
                 "reference": "3d81e4309d2a927abbe66df935f4bb60082805ad",
                 "shasum": ""
             },
@@ -700,6 +876,7 @@
                     "Opis\\Closure\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -723,14 +900,23 @@
                 "serialization",
                 "serialize"
             ],
+            "support": {
+                "issues": "https://github.com/opis/closure/issues",
+                "source": "https://github.com/opis/closure/tree/3.6.3"
+            },
             "time": "2022-01-27T09:35:39+00:00"
         },
         {
             "name": "psr/cache",
             "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/cache/1.0.1/psr-cache-1.0.1.zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
                 "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
                 "shasum": ""
             },
@@ -748,6 +934,7 @@
                     "Psr\\Cache\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -763,14 +950,22 @@
                 "psr",
                 "psr-6"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/master"
+            },
             "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/container",
             "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/container/2.0.2/psr-container-2.0.2.zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "shasum": ""
             },
@@ -788,6 +983,7 @@
                     "Psr\\Container\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -806,14 +1002,23 @@
                 "container-interop",
                 "psr"
             ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/2.0.2"
+            },
             "time": "2021-11-05T16:47:00+00:00"
         },
         {
             "name": "psr/http-factory",
             "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/http-factory/1.0.1/psr-http-factory-1.0.1.zip",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
                 "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
                 "shasum": ""
             },
@@ -832,6 +1037,7 @@
                     "Psr\\Http\\Message\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -852,14 +1058,22 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory/tree/master"
+            },
             "time": "2019-04-30T12:38:16+00:00"
         },
         {
             "name": "psr/http-message",
             "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/http-message/1.0.1/psr-http-message-1.0.1.zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
                 "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
                 "shasum": ""
             },
@@ -877,6 +1091,7 @@
                     "Psr\\Http\\Message\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -896,14 +1111,22 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
             "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/log/1.1.4/psr-log-1.1.4.zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
                 "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
@@ -921,6 +1144,7 @@
                     "Psr\\Log\\": "Psr/Log/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -937,14 +1161,22 @@
                 "psr",
                 "psr-3"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
             "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "psr/simple-cache",
             "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/simple-cache/1.0.1/psr-simple-cache-1.0.1.zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
                 "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
                 "shasum": ""
             },
@@ -962,6 +1194,7 @@
                     "Psr\\SimpleCache\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -979,14 +1212,22 @@
                 "psr-16",
                 "simple-cache"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/simple-cache/tree/master"
+            },
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/ralouphie/getallheaders/3.0.3/ralouphie-getallheaders-3.0.3.zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
                 "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
@@ -1003,6 +1244,7 @@
                     "src/getallheaders.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1013,14 +1255,23 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
             "version": "v2.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/deprecation-contracts.git",
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/deprecation-contracts/v2.5.2/symfony-deprecation-contracts-v2.5.2.zip",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
                 "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
                 "shasum": ""
             },
@@ -1042,6 +1293,7 @@
                     "function.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1057,14 +1309,36 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.2"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2022-01-02T09:53:40+00:00"
         },
         {
             "name": "symfony/finder",
             "version": "v5.4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "9b630f3427f3ebe7cd346c277a1408b00249dad9"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/finder/v5.4.8/symfony-finder-v5.4.8.zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/9b630f3427f3ebe7cd346c277a1408b00249dad9",
                 "reference": "9b630f3427f3ebe7cd346c277a1408b00249dad9",
                 "shasum": ""
             },
@@ -1082,6 +1356,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1097,14 +1372,36 @@
             ],
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/finder/tree/v5.4.8"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2022-04-15T08:07:45+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
             "version": "v1.26.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "cfa0ae98841b9e461207c13ab093d76b0fa7bace"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-php80/v1.26.0/symfony-polyfill-php80-v1.26.0.zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/cfa0ae98841b9e461207c13ab093d76b0fa7bace",
                 "reference": "cfa0ae98841b9e461207c13ab093d76b0fa7bace",
                 "shasum": ""
             },
@@ -1132,6 +1429,7 @@
                     "Resources/stubs"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1157,14 +1455,36 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.26.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2022-05-10T07:21:04+00:00"
         },
         {
             "name": "topthink/think-cache",
             "version": "v2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-cache.git",
+                "reference": "75a56b24affc65b51688fd89ada48c102757fd74"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/topthink/think-cache/v2.0.6/topthink-think-cache-v2.0.6.zip",
+                "url": "https://api.github.com/repos/top-think/think-cache/zipball/75a56b24affc65b51688fd89ada48c102757fd74",
                 "reference": "75a56b24affc65b51688fd89ada48c102757fd74",
                 "shasum": ""
             },
@@ -1182,6 +1502,7 @@
                     "think\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1192,14 +1513,23 @@
                 }
             ],
             "description": "Cache Manager",
+            "support": {
+                "issues": "https://github.com/top-think/think-cache/issues",
+                "source": "https://github.com/top-think/think-cache/tree/v2.0.6"
+            },
             "time": "2019-07-07T14:34:35+00:00"
         },
         {
             "name": "topthink/think-container",
             "version": "v2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-container.git",
+                "reference": "2189b39e42af2c14203ed4372b92e38989e9dabb"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/topthink/think-container/v2.0.5/topthink-think-container-v2.0.5.zip",
+                "url": "https://api.github.com/repos/top-think/think-container/zipball/2189b39e42af2c14203ed4372b92e38989e9dabb",
                 "reference": "2189b39e42af2c14203ed4372b92e38989e9dabb",
                 "shasum": ""
             },
@@ -1218,6 +1548,7 @@
                     "think\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1228,14 +1559,23 @@
                 }
             ],
             "description": "PHP Container & Facade Manager",
+            "support": {
+                "issues": "https://github.com/top-think/think-container/issues",
+                "source": "https://github.com/top-think/think-container/tree/v2.0.5"
+            },
             "time": "2022-05-23T06:24:54+00:00"
         },
         {
             "name": "topthink/think-helper",
             "version": "v3.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-helper.git",
+                "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/topthink/think-helper/v3.1.6/topthink-think-helper-v3.1.6.zip",
+                "url": "https://api.github.com/repos/top-think/think-helper/zipball/769acbe50a4274327162f9c68ec2e89a38eb2aff",
                 "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff",
                 "shasum": ""
             },
@@ -1254,6 +1594,7 @@
                     "think\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1264,14 +1605,23 @@
                 }
             ],
             "description": "The ThinkPHP6 Helper Package",
+            "support": {
+                "issues": "https://github.com/top-think/think-helper/issues",
+                "source": "https://github.com/top-think/think-helper/tree/v3.1.6"
+            },
             "time": "2021-12-15T04:27:55+00:00"
         },
         {
             "name": "topthink/think-orm",
             "version": "v2.0.53",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-orm.git",
+                "reference": "06783eda65547a70ea686360a897759e1f873fff"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/topthink/think-orm/v2.0.53/topthink-think-orm-v2.0.53.zip",
+                "url": "https://api.github.com/repos/top-think/think-orm/zipball/06783eda65547a70ea686360a897759e1f873fff",
                 "reference": "06783eda65547a70ea686360a897759e1f873fff",
                 "shasum": ""
             },
@@ -1295,6 +1645,7 @@
                     "think\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1309,14 +1660,23 @@
                 "database",
                 "orm"
             ],
+            "support": {
+                "issues": "https://github.com/top-think/think-orm/issues",
+                "source": "https://github.com/top-think/think-orm/tree/v2.0.53"
+            },
             "time": "2022-02-28T14:54:22+00:00"
         },
         {
             "name": "topthink/think-template",
             "version": "v2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-template.git",
+                "reference": "abfc293f74f9ef5127b5c416310a01fe42e59368"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/topthink/think-template/v2.0.8/topthink-think-template-v2.0.8.zip",
+                "url": "https://api.github.com/repos/top-think/think-template/zipball/abfc293f74f9ef5127b5c416310a01fe42e59368",
                 "reference": "abfc293f74f9ef5127b5c416310a01fe42e59368",
                 "shasum": ""
             },
@@ -1330,6 +1690,7 @@
                     "think\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -1340,14 +1701,23 @@
                 }
             ],
             "description": "the php template engine",
+            "support": {
+                "issues": "https://github.com/top-think/think-template/issues",
+                "source": "https://github.com/top-think/think-template/tree/v2.0.8"
+            },
             "time": "2020-12-10T07:52:03+00:00"
         },
         {
             "name": "webman/event",
             "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webman-php/event.git",
+                "reference": "db17d2fd6a5a8799f97f587b17a26b814901e01a"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/webman/event/v1.0.2/webman-event-v1.0.2.zip",
+                "url": "https://api.github.com/repos/webman-php/event/zipball/db17d2fd6a5a8799f97f587b17a26b814901e01a",
                 "reference": "db17d2fd6a5a8799f97f587b17a26b814901e01a",
                 "shasum": ""
             },
@@ -1357,18 +1727,28 @@
                     "Webman\\Event\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Webman event plugin",
+            "support": {
+                "issues": "https://github.com/webman-php/event/issues",
+                "source": "https://github.com/webman-php/event/tree/v1.0.2"
+            },
             "time": "2022-06-16T06:25:20+00:00"
         },
         {
             "name": "webman/think-cache",
             "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webman-php/think-cache.git",
+                "reference": "25bd103d7fc9347aca680e677282db761cc90a43"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/webman/think-cache/v1.0.1/webman-think-cache-v1.0.1.zip",
+                "url": "https://api.github.com/repos/webman-php/think-cache/zipball/25bd103d7fc9347aca680e677282db761cc90a43",
                 "reference": "25bd103d7fc9347aca680e677282db761cc90a43",
                 "shasum": ""
             },
@@ -1381,17 +1761,27 @@
                     "Webman\\ThinkCache\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
+            "support": {
+                "issues": "https://github.com/webman-php/think-cache/issues",
+                "source": "https://github.com/webman-php/think-cache/tree/v1.0.1"
+            },
             "time": "2022-03-30T03:27:46+00:00"
         },
         {
             "name": "webman/think-orm",
             "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webman-php/think-orm.git",
+                "reference": "3daa4b8f13477a63166ab36f48115f3827b90d10"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/webman/think-orm/v1.0.5/webman-think-orm-v1.0.5.zip",
+                "url": "https://api.github.com/repos/webman-php/think-orm/zipball/3daa4b8f13477a63166ab36f48115f3827b90d10",
                 "reference": "3daa4b8f13477a63166ab36f48115f3827b90d10",
                 "shasum": ""
             },
@@ -1405,17 +1795,27 @@
                     "Webman\\ThinkOrm\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
+            "support": {
+                "issues": "https://github.com/webman-php/think-orm/issues",
+                "source": "https://github.com/webman-php/think-orm/tree/v1.0.5"
+            },
             "time": "2022-07-01T11:38:03+00:00"
         },
         {
             "name": "workerman/webman-framework",
             "version": "v1.3.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/walkor/webman-framework.git",
+                "reference": "58d342cdde767e79313db45f35a80a13b18f71f6"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/workerman/webman-framework/v1.3.19/workerman-webman-framework-v1.3.19.zip",
+                "url": "https://api.github.com/repos/walkor/webman-framework/zipball/58d342cdde767e79313db45f35a80a13b18f71f6",
                 "reference": "58d342cdde767e79313db45f35a80a13b18f71f6",
                 "shasum": ""
             },
@@ -1439,6 +1839,7 @@
                     "Support\\Exception\\": "./src/support/exception"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1456,14 +1857,36 @@
                 "High Performance",
                 "http service"
             ],
+            "support": {
+                "email": "walkor@workerman.net",
+                "forum": "http://wenda.workerman.net/",
+                "issues": "https://github.com/walkor/webman/issues",
+                "source": "https://github.com/walkor/webman-framework",
+                "wiki": "http://doc.workerman.net/"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/walkor",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/walkor",
+                    "type": "patreon"
+                }
+            ],
             "time": "2022-06-30T15:10:24+00:00"
         },
         {
             "name": "workerman/workerman",
             "version": "v4.0.39",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/walkor/workerman.git",
+                "reference": "97ff0d0d3d20ce9abfd0f3c87e5e3481d3bf16d9"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/workerman/workerman/v4.0.39/workerman-workerman-v4.0.39.zip",
+                "url": "https://api.github.com/repos/walkor/workerman/zipball/97ff0d0d3d20ce9abfd0f3c87e5e3481d3bf16d9",
                 "reference": "97ff0d0d3d20ce9abfd0f3c87e5e3481d3bf16d9",
                 "shasum": ""
             },
@@ -1479,6 +1902,7 @@
                     "Workerman\\": "./"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1495,6 +1919,23 @@
             "keywords": [
                 "asynchronous",
                 "event-loop"
+            ],
+            "support": {
+                "email": "walkor@workerman.net",
+                "forum": "http://wenda.workerman.net/",
+                "issues": "https://github.com/walkor/workerman/issues",
+                "source": "https://github.com/walkor/workerman",
+                "wiki": "http://doc.workerman.net/"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/workerman",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/walkor",
+                    "type": "patreon"
+                }
             ],
             "time": "2022-06-16T14:11:47+00:00"
         }
