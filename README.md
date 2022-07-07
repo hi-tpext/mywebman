@@ -48,6 +48,8 @@ composer update
 
 ### 一些问题
 
+#### 运行目录
+
 传统的php-fpm一般是以 `public` 作为启动目录，为保持兼容，建议进入 `public` 目录执行启动命令：
 
 [linux]
@@ -80,6 +82,21 @@ cd public
 .\windows.bat
 ```
 ---
+
+#### extend
+
+extend扩展基于`composer.josn`配置
+
+初次安装会自动修改`composer。json`（命令行会提示：`注册扩展目录:extend/成功,composer.json文件已修改`），但修改后仍然需要下次运行`composer`相关命名才生效。
+
+如果下载extend插件不能识别，提示:
+```
+执行出错：
+未匹配到扩展
+```
+暂时解决办法删除`vendor`中的某个依赖，然后运行`composer u`重新下载，之后使`extend`生效。
+
+比如可以删除`vendor/ichynul`。
 
 ## 二、配置
 
@@ -133,6 +150,8 @@ cd public
 3.`HasBuilder` 封装了常用操作，可供控制器引入使用
 
 Thinkphp版：https://github.com/hi-tpext/myadmin
+
+webman插件主页：<https://www.workerman.net/plugin/70>
 
 #### 实例
 
