@@ -21,7 +21,7 @@ composer create-project workerman/webman mywebman
 
 cd mywebman
 
-composer require ichynul/tpextmyadmin:^4.0.5
+composer require ichynul/tpextmyadmin:^4.0.6
 ```
 
 > 安装完毕，此安装版是最小模式，只包含基本的后台功能，建议开发新项目时使用此方式。
