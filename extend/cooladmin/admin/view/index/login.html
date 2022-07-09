@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+        maximum-scale=1, user-scalable=no" />
+    <title>登录 - {$admin_page_title|default=''}</title>
+    <link rel="icon" href="{$admin_favicon|default=''}" type="image/ico">
+    <meta name="description" content="{$admin_page_description|default=''}">
+    <link rel="stylesheet" href="/assets/cooladmin/lib/theme-chalk/index.css?v={$admin_assets_ver|default='1.0'}" />
+    <link rel="stylesheet" href="/assets/cooladmin/css/login.css?v={$admin_assets_ver|default='1.0'}" />
+    <script>
+        if ('{$login_in_top}' == '1' && window != top) {
+            top.location.replace("{:url('/admin/index/login')}");
+
+            document.querySelector('body').innerHTML =
+
+                '<div style="background:#fff;z-index:999;padding-top:88px;position:fixed;top:0px;height:10000px;width:100%;text-align:center;font-size:18px;"><p>跳转中...</p></div>';
+
+            if (!!(window.attachEvent && !window.opera)) {
+                document.execCommand("stop");
+            } else {
+                window.stop();
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    {:\\tpext\\common\\ExtLoader::trigger('admin_login_page')}
+    <div id="app">
+        <div class="page-login" {if condition="$admin_login_background_img"
+            }style="background: url({$admin_login_background_img}) no-repeat;background-size: 100% 100%;" {/if}>
+            <div class="box">
+                <img class="logo" src="{$admin_login_logo|default='/assets/lightyearadmin/images/logo-ico.png'}"
+                    alt="{$admin_page_title|default=''}" />
+                <p class="desc">{$admin_page_title|default=''}</p>
+                <el-form ref="form" class="form" size="medium">
+                    <el-form-item label="用户名">
+                        <el-input placeholder="请输入您的用户名" v-model="form.username" maxlength="20" auto-complete="off">
+                        </el-input>
+                    </el-form-item>
+                    <el-form-item label="密码">
+                        <el-input type="password" placeholder="请输入密码" v-model="form.password" maxlength="20"
+                            auto-complete="off"></el-input>
+                    </el-form-item>
+                    <el-form-item label="验证码" class="captcha">
+                        <el-input placeholder="请输入图片验证码" maxlength="8" v-model="form.captcha" auto-complete="off"
+                            @keyup.enter.native="next"></el-input>
+                        <div class="login-captcha value" @click="refresh">
+                            <img :src="captchaUrl" alt="captcha" title="点击刷新" alt="captcha" />
+                        </div>
+                    </el-form-item>
+                </el-form>
+                <el-button class="submit-btn" @click="submit" :disabled="saving">立即登录</el-button>
+                {notempty name="$admin_copyright"}
+                <p class="desc">{$admin_copyright|raw}</p>
+                {/notempty}
+                {:\\tpext\\common\\ExtLoader::trigger('admin_login_box_footer')}
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/cooladmin/lib/vue.min.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="/assets/cooladmin/lib/index.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="/assets/cooladmin/lib/axios.min.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+
+    <script type="text/javascript">
+        var that = null;
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    form: {
+                        username: "",
+                        password: "",
+                        captchaId: "",
+                        captcha: ""
+                    },
+                    saving: false,
+                    captchaUrl: "{:url('/admin/index/captcha')}?d=1"
+                }
+            },
+            mounted() {
+                that = this;
+            },
+            methods: {
+                refresh() {
+                    this.captchaUrl += '1';
+                    this.form.captcha = "";
+                },
+                submit() {
+                    if (!this.form.username) {
+                        return this.$message.warning("用户名不能为空");
+                    }
+
+                    if (!this.form.password) {
+                        return this.$message.warning("密码不能为空");
+                    }
+
+                    if (!this.form.captcha) {
+                        return this.$message.warning("图片验证码不能为空");
+                    }
+                    this.saving = true;
+                    axios({
+                        method: 'post',
+                        url: location.href,
+                        responseType: 'json',
+                        data: this.form,
+                        headers: {
+                            'x-requested-with': 'xmlhttprequest',
+                        },
+                    }).then(function (res) {
+                        that.saving = false;
+                        var data = res.data;
+                        if (data.code) {
+                            that.$message.success(data.msg || data.message || '登录成功');
+                            setTimeout(function () {
+                                if (window == top || '{$login_in_top}' == '1' || !data.url) {
+                                    location.href = "{:url('/admin/index/index')}";
+                                }
+                                else {
+                                    location.href = data.url;
+                                }
+                            }, 500);
+                        } else {
+                            that.$message.error(data.msg || data.message || '登录失败', 'warning');
+                            that.captchaUrl += '1';
+                            that.form.captcha = "";
+                        }
+                    }).catch(function (e) {
+                        that.saving = false;
+                        that.$message.error(JSON.stringify(e), 'warning');
+                    });
+                }
+            }
+        });
+    </script>
+    {:\\tpext\\common\\ExtLoader::trigger('admin_login_script')}
+</body>
+
+</html>

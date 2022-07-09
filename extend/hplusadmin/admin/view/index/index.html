@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>首页 - {$admin_page_title|default=''}</title>
+    <link rel="icon" href="{$admin_favicon|default=''}" type="image/ico">
+    <meta name="description" content="{$admin_page_description|default=''}">
+    <link rel="icon" href="{$admin_favicon|default=''}" type="image/ico">
+    <link href="/assets/lightyearadmin/css/bootstrap.min.css?v={$admin_assets_ver|default='1.0'}" rel="stylesheet">
+    <link href="/assets/lightyearadmin/css/materialdesignicons.min.css?v={$admin_assets_ver|default='1.0'}"
+        rel="stylesheet">
+    <link href="/assets/hplusadmin/css/style.min.css?v={$admin_assets_ver|default='1.0'}" rel="stylesheet">
+    <style>
+        .nav-header {
+            padding: 10px 25px;
+        }
+
+        .body.mini-navbar .nav-header {
+            padding: 0;
+        }
+
+        .logo-element {
+            font-size: 14px;
+        }
+
+        .nav.navbar-right>li>a {
+            padding: 15 10px;
+            line-height: 20px;
+            max-height: 50px;
+        }
+
+        .active>a>.mdi.arrow::before {
+            content: "\F140";
+        }
+
+        .mdi.arrow::before {
+            content: "\F141";
+        }
+
+        .left_title {
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        #top-menu-out li>a {
+            padding: 15px 10px;
+        }
+
+        #top-menu-out li.current a,
+        #top-menu-out li.current a:hover,
+        #top-menu-out li.current a:focus {
+            text-decoration: none;
+            background-color: #728291;
+            color: #fff;
+        }
+
+        #top-menu-out li a:hover,
+        #top-menu-out li a:focus {
+            background-color: #dae0e6;
+            color: #728291;
+        }
+
+        .navbar-header {
+            width: 100%;
+        }
+
+        /* 
+        .navbar-header.has-top-meun {
+            background: #fff;
+        } */
+
+        .navbar-top-links li.navbar-right {
+            margin-right: -15px;
+        }
+
+        .navbar-right a {
+            color: #999c9e;
+        }
+
+        .sub-nav-item.preview li>a {
+            color: #5d636f;
+        }
+    </style>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse" id="side-menu-out">
+                <ul class="nav sidebar-main">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element text-center">
+                            <div class="left_title"><b>{$admin_page_title|default='admin'}</b></div>
+                            <span><img alt="image" class="img-circle" style="width: 64px; height: 64px;"
+                                    src="{$admin_user.avatar|default='/assets/lightyearadmin/images/no-avatar.jpg'}" /></span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs"><strong
+                                            class="font-bold">{$admin_user.name|default='Tpext'}</strong></span>
+                                    <span class="text-muted text-xs block">{$admin_user.group_name|default='管理员'}<b
+                                            class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="J_menuItem" href="{:url('/admin/index/profile')}"><i class="mdi
+                                    mdi-account"></i>个人信息</a>
+                                </li>
+                                <li><a class="J_menuItem" href="{:url('/admin/index/changepwd')}"><i class="mdi
+                                    mdi-lock-outline"></i>修改密码</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#" onclick="logout();"><i class="mdi mdi-logout"></i>安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">{$admin_user.name|default='Tpext'}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#"><i
+                                class="mdi mdi-menu"></i></a>
+                        <!--扩展左侧链接(不再支持topbar_left_links)-->
+                        <ul class="nav navbar-top-links" id="top-menu-out">
+                            <li class="navbar-right">
+                                <ul>
+                                    <li>
+                                        <a title="打开首页" class="link" href="/" target="_blank"><i
+                                                class="mdi mdi-home"></i></a>
+                                    </li>
+                                    {if condition="checkUrl(url('/admin/index/clearcache'))"}
+                                    <li>
+                                        <a title="清空缓存" class="link J_menuItem"
+                                            href="{:url('/admin/index/clearcache')}"><i class="mdi
+                                mdi-delete"></i><span class="hidden">清空缓存</span></a>
+                                    </li>
+                                    {/if}
+                                    <!--
+                                        扩展右侧链接
+                                        ****************** tags.php注册 ********************
+                                        'topbar_right_links' => [
+                                            'app\\common\\behavior\\RightLinks'
+                                        ],
+                                        ****************** tags.php注册 ********************
+                                        class RightLinks
+                                        {
+                                            public function run()
+                                            {
+                                                echo '<li><a href="xxx">我的链接</a></li>';
+                                            }
+                                        }
+                                        -->
+                                    {:\\tpext\\common\\ExtLoader::trigger('topbar_right_links')}
+                                    <li class="dropdown">
+                                        <a class="right-sidebar-toggle" aria-expanded="false">
+                                            <i class="mdi mdi-palette"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft"><i class="mdi mdi-skip-backward"></i>
+                </button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="{$dashbord.url}">{$dashbord.name}</a>
+                    </div>
+                </nav>
+                <button class="roll-nav roll-right J_tabRight"><i class="mdi mdi-skip-forward"></i>
+                </button>
+                <div class="btn-group roll-nav roll-right">
+                    <button class="dropdown J_tabClose" data-toggle="dropdown">操作<span class="caret"></span>
+                    </button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li class="J_tabShowActive"><a>定位当前选项卡</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="J_tabCloseAll"><a>关闭全部选项卡</a>
+                        </li>
+                        <li class="J_tabCloseOther"><a>关闭其他选项卡</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="{$dashbord.url}" frameborder="0"
+                    data-id="{$dashbord.url}" seamless></iframe>
+            </div>
+        </div>
+        <!--右侧部分结束-->
+        <!--右侧边栏开始-->
+        <div id="right-sidebar">
+            <div class="sidebar-container">
+                <div class="sidebar-title">
+                    <h3> <i class="fa fa-comments-o"></i> 主题设置</h3>
+                    <small><i class="fa fa-tim"></i> 你可以从这里选择和预览主题的布局和样式，这些设置会被保存在本地，下次打开的时候会直接应用这些设置。</small>
+                </div>
+                <div class="skin-setttings">
+                    <div class="title">主题设置</div>
+                    <div class="setings-item">
+                        <span>收起左侧菜单</span>
+                        <div class="switch">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox"
+                                    id="collapsemenu">
+                                <label class="onoffswitch-label" for="collapsemenu">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setings-item">
+                        <span>固定顶部</span>
+
+                        <div class="switch">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="fixednavbar" class="onoffswitch-checkbox" id="fixednavbar">
+                                <label class="onoffswitch-label" for="fixednavbar">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setings-item">
+                        <span>
+                            固定宽度
+                        </span>
+
+                        <div class="switch">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="boxedlayout" class="onoffswitch-checkbox" id="boxedlayout">
+                                <label class="onoffswitch-label" for="boxedlayout">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title">皮肤选择</div>
+                    <div class="setings-item default-skin nb">
+                        <span class="skin-name ">
+                            <a href="#" class="s-skin-0">
+                                默认皮肤
+                            </a>
+                        </span>
+                    </div>
+                    <div class="setings-item blue-skin nb">
+                        <span class="skin-name ">
+                            <a href="#" class="s-skin-1">
+                                蓝色主题
+                            </a>
+                        </span>
+                    </div>
+                    <div class="setings-item yellow-skin nb">
+                        <span class="skin-name ">
+                            <a href="#" class="s-skin-3">
+                                黄色/紫色主题
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/lightyearadmin/js/jquery.min.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="/assets/lightyearadmin/js/bootstrap.min.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+    <script type="text/javascript"
+        src="/assets/hplusadmin/js/plugins/metisMenu/jquery.metisMenu.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+    <script type="text/javascript"
+        src="/assets/hplusadmin/js/plugins/slimscroll/jquery.slimscroll.min.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="/assets/tpextbuilder/js/layer/layer.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="/assets/hplusadmin/js/hplus.min.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="/assets/hplusadmin/js/contabs.min.js?v={$admin_assets_ver|default='1.0'}"
+        charset="utf-8"></script>
+
+    <script>
+        var hasTopMenu = '{$index_top_menu ?? 0}' == '1';
+
+        var setSidebar = function (data) {
+            if (data.length == 0) {
+                return false;
+            }
+            var treeObj = treeData(data, 'id', 'pid', 'children');
+
+            if (hasTopMenu) {
+                $('.navbar-header').addClass('has-top-meun');
+
+                for (var i = 0; i < treeObj.length; i++) {
+                    var children = treeObj[i].children;
+                    if (!children || !children.length) {
+                        if (treeObj[i].url && treeObj[i].url != '#') {
+                            children = [treeObj[i]];
+                        }
+                    }
+                    var html = createMenu(children, 0);
+                    if (!treeObj[i].is_home) {
+                        $('#top-menu-out').append('<li data-nav="' + treeObj[i].id + '" class="nav-item ' + (i == 0 ? 'current' : '') + '"><a class="link" href="#"><i class="' + treeObj[i].icon + '"></i>' + treeObj[i].name + '</a></li>');
+                    }
+
+                    $('#side-menu-out').append('<ul id="sub-nav-' + treeObj[i].id + '" class="nav sub-nav-item sidebar-main ' + (i == 0 ? '' : ' hidden') + '">' + html + '</ul>');
+                }
+
+                $('body').on('click', '#top-menu-out li.nav-item', function () {
+                    if ($(this).hasClass('current')) {
+                        return false;
+                    }
+                    $('#top-menu-out li.current').removeClass('current');
+                    $(this).addClass('current');
+                    //
+                    $('#side-menu-out ul.sub-nav-item').addClass('hidden').removeClass('preview');
+                    $('#sub-nav-' + $(this).data('nav')).removeClass('hidden').removeClass('preview');
+                });
+
+                $("#top-menu-out li.nav-item").hover(function () {
+                    if ($(this).hasClass('current')) {
+                        return false;
+                    }
+                    $('#sub-nav-' + $(this).data('nav')).removeClass('hidden').addClass('preview');
+                }, function () {
+                    if ($(this).hasClass('current')) {
+                        return false;
+                    }
+                    $('#sub-nav-' + $(this).data('nav')).addClass('hidden').removeClass('preview');
+                });
+            }
+            else {
+                var html = createMenu(treeObj, 0);
+                $('.sidebar-main').attr('id', 'side-menu').append(html);
+            }
+        }
+
+        var createMenu = function (data, deep) {
+            if (!data) {
+                return;
+            }
+
+            deep += 1;
+            var classMap = {
+                1: '',
+                2: 'nav-second-level',
+                3: 'nav-third-level',
+                4: '',//
+            };
+            var deepClass = classMap[deep];
+            var menu_body = deep > 1 ? '<ul class="nav ' + deepClass + '">' : '';
+            for (var i = 0; i < data.length; i++) {
+
+                icon_div = data[i].pid == 0 ? '<i class="' + data[i].icon + '"></i>' : '<i class="' + data[i].icon +
+                    '"></i>&nbsp;';
+
+                if (data[i].children && data[i].children.length > 0) {
+                    menuName = '<span class="nav-label">' + data[i].name + '</span>';
+                    menu_body += '<li><a href="javascript:void(0)">' + icon_div +
+                        menuName + '<span class="mdi arrow pull-right"></span>' + '</a>';
+                    menu_body += createMenu(data[i].children, deep);
+                } else {
+                    menuName = '<span>' + data[i].name + '</span>';
+                    menu_body += '<li><a class="J_menuItem" href="' +
+                        data[i].url + '">' +
+                        icon_div + '<span>' + data[i].name + '</span>' + '</a>';
+                }
+                menu_body += deep > 1 ? '</li>' : '';
+            }
+
+            menu_body += '</ul>';
+            return menu_body;
+        };
+
+        window.logout = function () {
+            layer.msg('确定要注销登录？', {
+                time: 4000,
+                btn: ['确定', '取消'],
+                yes: function (params) {
+                    location.replace("{:url('/admin/index/logout')}");
+                }
+            });
+        };
+
+        /**
+         * @author CSDN 蔚莱先森
+         * @param source json数据源
+         * @param id 主键ID
+         * @param parendId 父级ID名称
+         * @param children 子级名称
+         */
+        var treeData = function (source, id, parentId, children) {
+            var cloneData = (typeof source == 'object') ? source : JSON.parse(source);
+            return cloneData.filter(function (father) {
+                var branchArr = cloneData.filter(function (child) { return father[id] == child[parentId] });
+                branchArr.length > 0 ? father[children] = branchArr : '';
+                return father[parentId] == 0
+            })
+        }
+        // 使用
+
+        var json_str = '{$menus|raw}';
+
+        setSidebar(json_str);
+
+        $('#side-menu-out ul.sub-nav-item').metisMenu();
+
+        $('a.open-tab').click(function () {
+            $.fn.multitabs().create(this, true);
+            return false;
+        });
+
+        ((function ($) {
+            // 兼容 lightyear 的 MultiTabs js
+            var MultiTabs = function (element) {
+                var self = this;
+                self.$element = $(element);
+            };
+            MultiTabs.prototype = {
+                /**
+                 * constructor
+                 */
+                constructor: MultiTabs,
+
+                /**
+                 * create tab and return this.
+                 * @param obj           the obj to trigger multitabs
+                 * @param active        if true, active tab after create
+                 * @returns this        Chain structure.
+                 */
+                create: function (obj, active) {
+                    //打开 tab 具体逻辑见 /assets/hplusadmin/js/multitabs.js 解压
+                    var t = $(obj).attr("href"),
+                        a = $(obj).data("index"),
+                        i = $.trim($(obj).attr('title') || $(obj).data('title') || $(obj).text()),
+                        n = !0;
+                    if (void 0 == t || 0 == $.trim(t).length) return !1;
+                    if ($(".J_menuTab").each(function () {
+                        return $(obj).data("id") == t ? ($(obj).hasClass("active") || ($(obj).addClass("active").siblings(".J_menuTab").removeClass("active"), e(obj), $(".J_mainContent .J_iframe").each(function () {
+                            return $(obj).data("id") == t ? ($(obj).show().siblings(".J_iframe").hide(), !1) : void 0
+                        })), n = !1, !1) : void 0
+                    }), n) {
+                        var s = '<a href="javascript:;" class="active J_menuTab" data-id="' + t + '">' + i + ' <i class="mdi mdi-close-circle"></i></a>';
+                        $(".J_menuTab").removeClass("active");
+                        var r = '<iframe class="J_iframe" name="iframe' + a + '" width="100%" height="100%" src="' + t + '?v=4.0" frameborder="0" data-id="' + t + '" seamless></iframe>';
+                        $(".J_mainContent").find("iframe.J_iframe").hide().parents(".J_mainContent").append(r);
+                        var o = layer.load();
+                        $(".J_mainContent iframe:visible").load(function () {
+                            layer.close(o)
+                        }),
+                            $(".J_menuTabs .page-tabs-content").append(s),
+                            this.e($(".J_menuTab.active"))
+                    }
+                    return this;
+                },
+                e: function (e) {
+                    var a = this.t($(e).prevAll()),
+                        i = this.t($(e).nextAll()),
+                        n = this.t($(".content-tabs").children().not(".J_menuTabs")),
+                        s = $(".content-tabs").outerWidth(!0) - n,
+                        r = 0;
+                    if ($(".page-tabs-content").outerWidth() < s) r = 0;
+                    else if (i <= s - $(e).outerWidth(!0) - $(e).next().outerWidth(!0)) {
+                        if (s - $(e).next().outerWidth(!0) > i) {
+                            r = a;
+                            for (var o = e; r - $(o).outerWidth() > $(".page-tabs-content").outerWidth() - s;) r -= $(o).prev().outerWidth(),
+                                o = $(o).prev()
+                        }
+                    } else a > s - $(e).outerWidth(!0) - $(e).prev().outerWidth(!0) && (r = a - $(e).prev().outerWidth(!0));
+                    $(".page-tabs-content").animate({
+                        marginLeft: 0 - r + "px"
+                    },
+                        "fast")
+                },
+                t: function (t) {
+                    var e = 0;
+                    return $(t).each(function () {
+                        e += $(this).outerWidth(!0)
+                    }),
+                        e
+                }
+            };
+
+            $.fn.multitabs = function () {
+                var self = $(this),
+                    did = 'multitabs',
+                    multitabs = $(document).data(did);
+                if (!multitabs) {
+                    multitabs = new MultiTabs(this);
+                    $(document).data(did, multitabs);
+                }
+                return $(document).data(did);
+            };
+        })(jQuery));
+
+        //头像下拉操作自动关闭
+        $('.nav-header .dropdown-menu li a').click(function () {
+            if ($(this).parents('.dropdown').size() && (toggle = $(this).parents('.dropdown').find('a.dropdown-toggle'))) {
+                $(this).parents('.dropdown .dropdown-menu li.active').removeClass('active');
+                toggle.trigger('click');
+            }
+
+            return false;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+/** style from COOL-ADMIN **/
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "微软雅黑", Arial, sans-serif;
+}
+
+html,
+body,
+#app {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+input,
+button {
+    outline: none;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px 2f3447 inset;
+}
+
+.page-login {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: rgb(44, 44, 44);
+
+    .box {
+        background-color: rgba(44, 44, 44,.8888);
+        border-radius: 10px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        position: absolute;
+        left: calc(50% - 250px);
+        top: calc(50% - 280px);
+
+        .logo {
+            max-width: 100%;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .desc {
+            color: #ccc;
+            font-size: 12px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        .el-form {
+            width: 300px;
+            border-radius: 3px;
+
+            .el-form-item {
+                margin-bottom: 20px;
+
+                &__label {
+                    color: #ccc;
+                }
+            }
+
+            .el-input {
+                .el-input__inner {
+                    border: 0;
+                    border-bottom: 0.5px solid #999;
+                    border-radius: 0;
+                    padding: 0 5px;
+                    background-color: transparent;
+                    color: #ccc;
+                    transition: border-color 0.3s;
+                    position: relative;
+
+                    &:focus {
+                        border-color: #fff;
+                        color: #fff;
+                    }
+
+                    &:-webkit-autofill {
+                        -webkit-text-fill-color: #fff !important;
+                        -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+                        transition: background-color 50000s ease-in-out 0s;
+                    }
+                }
+            }
+
+            .captcha {
+                position: relative;
+
+                .value {
+                    position: absolute;
+                    bottom: 2px;
+                    right: 0;
+                    height: 36px;
+                    cursor: pointer;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            padding: 10px 60px;
+            color: #000;
+        }
+    }
+}

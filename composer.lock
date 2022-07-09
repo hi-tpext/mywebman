@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d35b4ec48af0891da722b021cd540a4d",
+    "content-hash": "787dd991c596f372d857d0d0a2edd210",
     "packages": [
         {
             "name": "gregwar/captcha",
@@ -268,16 +268,16 @@
         },
         {
             "name": "ichynul/tpext",
-            "version": "4.0.5",
+            "version": "4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hi-tpext/tpext.git",
-                "reference": "b2c24c07b8abb283ef221355a00ee8d46a91ccb7"
+                "reference": "bcaec0ea278520c1eeedced27baeb61648a2c0b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpext/zipball/b2c24c07b8abb283ef221355a00ee8d46a91ccb7",
-                "reference": "b2c24c07b8abb283ef221355a00ee8d46a91ccb7",
+                "url": "https://api.github.com/repos/hi-tpext/tpext/zipball/bcaec0ea278520c1eeedced27baeb61648a2c0b4",
+                "reference": "bcaec0ea278520c1eeedced27baeb61648a2c0b4",
                 "shasum": ""
             },
             "require": {
@@ -315,22 +315,22 @@
             ],
             "support": {
                 "issues": "https://github.com/hi-tpext/tpext/issues",
-                "source": "https://github.com/hi-tpext/tpext/tree/4.0.5"
+                "source": "https://github.com/hi-tpext/tpext/tree/4.0.6"
             },
-            "time": "2022-07-06T15:16:47+00:00"
+            "time": "2022-07-09T09:32:33+00:00"
         },
         {
             "name": "ichynul/tpextbuilder",
-            "version": "3.7.2",
+            "version": "3.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hi-tpext/tpextbuilder.git",
-                "reference": "572780096015ad2aa7fe0fce908b62d836e33353"
+                "reference": "b552ebd65a3a2feec2896c1eee79ed117769a0a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpextbuilder/zipball/572780096015ad2aa7fe0fce908b62d836e33353",
-                "reference": "572780096015ad2aa7fe0fce908b62d836e33353",
+                "url": "https://api.github.com/repos/hi-tpext/tpextbuilder/zipball/b552ebd65a3a2feec2896c1eee79ed117769a0a1",
+                "reference": "b552ebd65a3a2feec2896c1eee79ed117769a0a1",
                 "shasum": ""
             },
             "require": {
@@ -369,22 +369,22 @@
             ],
             "support": {
                 "issues": "https://github.com/hi-tpext/tpextbuilder/issues",
-                "source": "https://github.com/hi-tpext/tpextbuilder/tree/3.7.2"
+                "source": "https://github.com/hi-tpext/tpextbuilder/tree/3.7.3"
             },
-            "time": "2022-07-03T09:01:10+00:00"
+            "time": "2022-07-08T14:22:25+00:00"
         },
         {
             "name": "ichynul/tpextmanager",
-            "version": "3.3.6",
+            "version": "3.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hi-tpext/tpextmanager.git",
-                "reference": "9e3648e43609a9e2d7a9db7ceda406903d62fe65"
+                "reference": "2ca0556c4f958e68f91a7f687bfee86f4e1a9168"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpextmanager/zipball/9e3648e43609a9e2d7a9db7ceda406903d62fe65",
-                "reference": "9e3648e43609a9e2d7a9db7ceda406903d62fe65",
+                "url": "https://api.github.com/repos/hi-tpext/tpextmanager/zipball/2ca0556c4f958e68f91a7f687bfee86f4e1a9168",
+                "reference": "2ca0556c4f958e68f91a7f687bfee86f4e1a9168",
                 "shasum": ""
             },
             "require": {
@@ -423,28 +423,28 @@
             ],
             "support": {
                 "issues": "https://github.com/hi-tpext/tpextmanager/issues",
-                "source": "https://github.com/hi-tpext/tpextmanager/tree/3.3.6"
+                "source": "https://github.com/hi-tpext/tpextmanager/tree/3.3.7"
             },
-            "time": "2022-07-04T04:01:19+00:00"
+            "time": "2022-07-07T15:14:51+00:00"
         },
         {
             "name": "ichynul/tpextmyadmin",
-            "version": "4.0.5",
+            "version": "4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hi-tpext/tpextmyadmin.git",
-                "reference": "fd61034bd406c2d080fcc4ca7d3db913611a6bb3"
+                "reference": "6fc945bc64805a6dbbb42fafc335a56994eac57c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpextmyadmin/zipball/fd61034bd406c2d080fcc4ca7d3db913611a6bb3",
-                "reference": "fd61034bd406c2d080fcc4ca7d3db913611a6bb3",
+                "url": "https://api.github.com/repos/hi-tpext/tpextmyadmin/zipball/6fc945bc64805a6dbbb42fafc335a56994eac57c",
+                "reference": "6fc945bc64805a6dbbb42fafc335a56994eac57c",
                 "shasum": ""
             },
             "require": {
                 "gregwar/captcha": "^1.0",
                 "ichynul/lightyearadmin": "^1.1.8",
-                "ichynul/tpext": "^4.0.1",
+                "ichynul/tpext": "^4.0.6",
                 "ichynul/tpextbuilder": "^3.7.2",
                 "ichynul/tpextmanager": "^3.3.6",
                 "matthiasmullie/minify": "^1.3"
@@ -476,9 +476,9 @@
             ],
             "support": {
                 "issues": "https://github.com/hi-tpext/tpextmyadmin/issues",
-                "source": "https://github.com/hi-tpext/tpextmyadmin/tree/4.0.5"
+                "source": "https://github.com/hi-tpext/tpextmyadmin/tree/4.0.7"
             },
-            "time": "2022-07-06T03:28:20+00:00"
+            "time": "2022-07-09T09:39:00+00:00"
         },
         {
             "name": "intervention/image",

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+        maximum-scale=1, user-scalable=no" />
+  <title>首页 - {$admin_page_title|default=''}</title>
+  <link rel="icon" href="{$admin_favicon|default=''}" type="image/ico">
+  <meta name="description" content="{$admin_page_description|default=''}">
+  <link rel="stylesheet" href="/assets/cooladmin/css/index.css?v={$admin_assets_ver|default='1.0'}" />
+  <link rel="stylesheet"
+    href="/assets/lightyearadmin/css/materialdesignicons.min.css?v={$admin_assets_ver|default='1.0'}">
+</head>
+
+<body>
+  <div id="app" class="hidden" element-loading-background="rgba(0, 0, 0, 0.3)">
+    <div class="page-layout" :class="{ collapse: menuCollapse }">
+      <!-- 遮罩层 -->
+      <div class="page-layout__mask" @click="collapseMenu(true)"></div>
+      <div class="page-layout__left">
+        <!-- 侧栏 -->
+        <div class="app-slider">
+          <div class="app-slider__logo">
+            <template v-if="menuCollapse || browser.isMini">
+              <span @click="collapseMenu(false)"><img class="mini"
+                  src="/assets/cooladmin/icon/logo/silder-simple.png" /></span>
+            </template>
+            <template v-else>
+              {$admin_logo|raw|default='admin'}
+            </template>
+          </div>
+          <div class="app-slider__menu">
+            <div class="cl-slider-menu">
+              <el-menu :default-active="activeTabId" background-color="transparent" :collapse-transition="false"
+                :collapse="browser.isMini ? false : menuCollapse" @select="leftMenuSelect">
+                <template v-for="(item, index) in leftMenu">
+                  <el-submenu v-show="!hasTopMenu || item.pid == topActiveId"
+                    v-if="item.children && item.children.length" popper-class="cl-slider-menu__submenu"
+                    :index="item.id">
+                    <template slot="title">
+                      <i class="icon-svg" :class="item.icon"></i>
+                      <span slot="title">{{item.name}}</span>
+                    </template>
+                    <template v-for="(subitem1, index) in item.children">
+                      <el-submenu v-if="subitem1.children && subitem1.children.length"
+                        popper-class="cl-slider-menu__submenu" :index="subitem1.id">
+                        <template slot="title">
+                          <i class="icon-svg" :class="subitem1.icon"></i>
+                          <span slot="title">{{subitem1.name}}</span>
+                        </template>
+                        <template v-for="(subitem2, index) in subitem1.children">
+                          <el-submenu v-if="subitem2.children && subitem2.children.length"
+                            popper-class="cl-slider-menu__submenu" :index="subitem2.id">
+                            <template slot="title">
+                              <i class="icon-svg" :class="subitem2.icon"></i>
+                              <span slot="title" @contextmenu.prevent="stopDefault">{{subitem2.name}}</span>
+                            </template>
+                          </el-submenu>
+                          <el-menu-item v-else :index="subitem2.id">
+                            <i class="icon-svg" :class="subitem2.icon"></i>
+                            <span slot="title" @contextmenu.prevent="stopDefault">{{subitem2.name}}</span>
+                          </el-menu-item>
+                        </template>
+                      </el-submenu>
+                      <el-menu-item v-else :index="subitem1.id">
+                        <i class="icon-svg" :class="subitem1.icon"></i>
+                        <span slot="title" @contextmenu.prevent="stopDefault">{{subitem1.name}}</span>
+                      </el-menu-item>
+                    </template>
+                  </el-submenu>
+                  <el-menu-item v-show="!hasTopMenu || item.pid == topActiveId" v-else :index="item.id" :key="item.id">
+                    <i class="icon-svg" :class="item.icon"></i>
+                    <span slot="title" @contextmenu.prevent="stopDefault">{{item.name}}</span>
+                  </el-menu-item>
+                </template>
+              </el-menu>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-layout__right">
+        <!-- 顶栏 -->
+        <div class="page-layout__topbar">
+          <div class="app-topbar">
+            <div class="app-topbar__collapse" @click="collapseMenu(!menuCollapse)">
+              <i :class="[menuCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold']"></i>
+            </div>
+            <!-- 一级菜单 -->
+            <div class="app-topbar__menu" v-if="hasTopMenu">
+              <div class="cl-menu-topbar">
+                <el-menu :default-active="topActiveId" mode="horizontal" background-color="transparent"
+                  @select="topMenuSelect">
+                  <el-menu-item v-for="(item, index) in topMenu" :index="item.id" :key="item.id">
+                    <i class="icon-svg" :class="item.icon"></i>
+                    <span>{{ item.name }}</span>
+                  </el-menu-item>
+                </el-menu>
+              </div>
+            </div>
+
+            <div class="cl-route-nav" v-if="!browser.isMini && !hasTopMenu">
+              <p class="title">
+                {$admin_page_title|default='admin'}
+              </p>
+            </div>
+            <div class="flex1"></div>
+            <!-- 工具栏 -->
+            <ul class="app-topbar__tools">
+              <li>
+                <a title="打开首页" href="/" target="_blank"><i class="el-icon-house"></i></a>
+              </li>
+              {if condition="checkUrl(url('/admin/index/clearcache'))"}
+              <li>
+                <a title="清空缓存" @click="onCommand('清空缓存|{:url('/admin/index/clearcache')}')"><i
+                    class="el-icon-delete"></i></a>
+              </li>
+              {/if}
+              <!-- 主题 -->
+              <li @click="openTheme">
+                <a title="主题"><i class="el-icon-magic-stick"></i></a>
+              </li>
+              {:\\tpext\\common\\ExtLoader::trigger('topbar_right_links')}
+            </ul>
+            <div class="cl-theme">
+              <!-- 系统设置 -->
+              <el-drawer title="系统设置" :visible.sync="drawer.visible" size="300px">
+                <div class="cl-theme__container">
+                  <div class="cl-theme__color is-card">
+                    <p>主题</p>
+                    <ul>
+                      <el-tooltip v-for="(item, name) in themes" :key="name" :content="item.label" placement="top">
+                        <li :style="{
+                                backgroundColor: item.color
+                              }" @click="setTheme(item)">
+                          <i class="el-icon-check" v-show="item.color == themeInfo.color"></i>
+                        </li>
+                      </el-tooltip>
+                    </ul>
+                  </div>
+                  <div class="cl-theme__switch is-card">
+                    <p>内容区域</p>
+                    <ul>
+                      <li v-if="!browser.isMini">
+                        <el-tooltip class="item" effect="dark" content="顶级菜单放到顶部显示，点击切换左边子菜单" placement="top-start">
+                          <span>显示顶部菜单栏</span>
+                        </el-tooltip>
+                        <el-switch size="mini" v-model="hasTopMenu"></el-switch>
+                      </li>
+                      <li>
+                        <el-tooltip class="item" effect="dark" content="切换顶部菜时激活其所属的第一个子菜单" placement="top-start">
+                          <span>激活第一个子菜单</span>
+                        </el-tooltip>
+                        <el-switch v-popover:popover :disabled="!hasTopMenu" size="mini" v-model="activeFirst">
+                        </el-switch>
+                      </li>
+                      <li>
+                        <el-tooltip class="item" effect="dark" content="收起来或展开左侧菜单" placement="top-start">
+                          <span>收缩左侧菜单栏</span>
+                        </el-tooltip>
+                        <el-switch size="mini" v-model="menuCollapse"></el-switch>
+                      </li>
+                      <li>
+                        <el-tooltip class="item" effect="dark" content="多页面选项卡，可控制在多个页面之间切换" placement="top-start">
+                          <span>显示页面切换栏</span>
+                        </el-tooltip>
+                        <el-switch size="mini" v-model="showProcess"></el-switch>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </el-drawer>
+            </div>
+            <!-- 用户信息 -->
+            <div class="app-topbar__user">
+              <el-dropdown trigger="click" @command="onCommand">
+                <span class="el-dropdown-link">
+                  <span class="name"
+                    title="{$admin_user.group_name|default=''}">{$admin_user.name|default='Tpext'}</span>
+                  <img class="avatar" src="{$admin_user.avatar|default='/assets/lightyearadmin/images/no-avatar.jpg'}"
+                    alt />
+                </span>
+                <el-dropdown-menu slot="dropdown" class="popper-dropdown-menu-user">
+                  <el-dropdown-item command="个人中心|{:url('/admin/index/profile')}">个人中心</el-dropdown-item>
+                  <el-dropdown-item command="修改密码|{:url('/admin/index/changepwd')}">修改密码</el-dropdown-item>
+                  <el-dropdown-item command="exit">退出</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+            </div>
+          </div>
+        </div>
+
+        <!-- 页面进程 -->
+        <div v-if="showProcess" class="page-layout__process">
+          <div class="app-process">
+            <div class="app-process__left hidden-xs-only" @click="toScroll(true)">
+              <i class="el-icon-arrow-left"></i>
+            </div>
+            <div class="app-process__scroller" ref="scroller">
+              <div @dblclick="reloadItem(item)" class="app-process__item" v-for="(item, index) in processList"
+                :key="index" :ref="`item-${item.id}`" :class="{ active: activeTabId == item.id}" :data-index="index"
+                @click="activeItem(item,index)">
+                <span>{{ item.label }}</span>
+                <i class="el-icon-close" v-if="index > 0" @click.stop="onDel(index)"></i>
+              </div>
+            </div>
+            <div class="app-process__right hidden-xs-only" @click="toScroll(false)">
+              <i class="el-icon-arrow-right"></i>
+            </div>
+            <el-dropdown @command="tabDropdownAction">
+              <span class="el-dropdown-link">
+                操作<i class="el-icon-arrow-down el-icon--right"></i>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item command="current" icon="el-icon-minus">关闭当前</el-dropdown-item>
+                <el-dropdown-item command="other" icon="el-icon-remove-outline">关闭其他</el-dropdown-item>
+                <el-dropdown-item command="all" icon="el-icon-circle-close">关闭所有</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
+        </div>
+
+        <!-- 页面视图 -->
+        <div class="page-layout__container" v-loading="iframeLoading">
+          <div class="page-layout__view">
+            <iframe @load="iframeLoading=false" :ref="`iframe-${item.id}`" :class="{ hidden: activeTabId != item.id}"
+              v-for="(item, index) in processList" :key="index" :name="'iframe'+index" width="100%" height="100%"
+              :src="item.value" frameborder="0" :data-url="item.value" seamless></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/assets/cooladmin/lib/vue.min.js?v={$admin_assets_ver|default='1.0'}"
+    charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/cooladmin/lib/index.js?v={$admin_assets_ver|default='1.0'}"
+    charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/cooladmin/js/index.js?v={$admin_assets_ver|default='1.0'}"
+    charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/cooladmin/lib/axios.min.js?v={$admin_assets_ver|default='1.0'}"
+    charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/lightyearadmin/js/jquery.min.js?v={$admin_assets_ver|default='1.0'}"
+    charset="utf-8"></script>
+  <script type="text/javascript" src="/assets/tpextbuilder/js/layer/layer.js?v={$admin_assets_ver|default='1.0'}"
+    charset="utf-8"></script>
+  <script type="text/javascript">
+    var that = null;
+    var browser = getBrowser();
+    var themes = getThemes();
+    var json_str = '{$menus|raw}';
+    var menuJson = JSON.parse(json_str);
+
+    var app = new Vue({
+      el: "#app",
+      data() {
+        return {
+          hasTopMenu: '{$index_top_menu ?? 0}' == '1' && !browser.isMini,
+          activeFirst: localStorage.getItem('activeFirst') == 'y',
+          showProcess: true,
+          menuCollapse: localStorage.getItem('menuCollapse') == 'y',
+          topMenu: [],
+          leftMenu: [],
+          processList: [
+            {
+              id: '{$dashbord.id}',
+              label: '{$dashbord.name}',
+              value: '{$dashbord.url}',
+            }
+          ],
+          iframeLoading: true,
+          activeTabId: '{$dashbord.id}',
+          activeTabIndex: 0,
+          topActiveId: 0,
+          drawer: {
+            visible: false
+          },
+          themeInfo: {
+            label: "",
+            name: "",
+            color: ""
+          },
+          themes: themes,
+        }
+      },
+      watch: {
+        hasTopMenu(v) {
+          this.buildMenu();
+        },
+        activeFirst(v) {
+          localStorage.setItem('activeFirst', v ? 'y' : 'n');
+        },
+        menuCollapse(v) {
+          localStorage.setItem('menuCollapse', v ? 'y' : 'n');
+        }
+      },
+      mounted() {
+        that = this;
+        this.buildMenu();
+        var theme = JSON.parse(localStorage.getItem('index_theme') || '{}');
+        if (!theme || !theme.name || !theme.color) {
+          theme = this.themes[0];
+        }
+        that.setTheme(theme);
+
+        Vue.nextTick(function () {
+          document.getElementById('app').className = ''
+        });
+      },
+      methods: {
+        buildMenu() {
+          var treeObj = treeData(menuJson, 'id', 'pid', 'children');
+          if (this.hasTopMenu) {
+            var menuInfo = getSubMenu(treeObj);
+            this.leftMenu = menuInfo.left;
+            this.topMenu = menuInfo.top;
+          }
+          else {
+            this.leftMenu = treeObj;
+            this.topMenu = [];
+          }
+        },
+        collapseMenu(is) {
+          that.menuCollapse = is;
+          localStorage.setItem('menuCollapse', is ? 'y' : 'n');
+        },
+        onCommand(e) {
+          if (e == 'exit') {
+            that.$confirm('确定要注销登录?', '提示', {
+              confirmButtonText: '确定',
+              cancelButtonText: '取消',
+              type: 'warning'
+            }).then(() => {
+              location.replace("{:url('/admin/index/logout')}");
+            }).catch(() => {
+              //
+            });
+          }
+          else {
+            var arr = e.split('|');
+            var url = arr[1].replace(/\.html/i, '');
+            var find = this.processList.find(e => (e.value == url || e.value == url + '.html'));
+            if (find) {
+              this.activeItem(find);
+            }
+            else {
+              var find0 = menuJson.find(e => (e.url == url || e.url == url + '.html'));
+              if (find0) {
+                this.openPage(
+                  {
+                    id: find0.id,
+                    label: arr[0],
+                    value: find0.url,
+                  }
+                );
+              }
+              else {
+                this.openPage(
+                  {
+                    id: url.replace(/\W/g, ''),
+                    label: arr[0],
+                    value: url,
+                  }
+                );
+              }
+            }
+          }
+        },
+        tabDropdownAction(e) {
+          if (e == 'current') {
+            this.onDel(this.processList.findIndex(e => e.id == this.activeTabId));
+            this.toPath();
+          }
+          else if (e == 'other') {
+            this.processList = this.processList.filter(
+              e => e.id == this.activeTabId || e.value == "{$dashbord.url}"
+            );
+            this.toPath();
+          }
+          else if (e == 'all') {
+            this.processList = this.processList.filter(
+              e => e.value == "{$dashbord.url}"
+            );
+            this.toPath();
+          }
+        },
+        openTheme() {
+          that.drawer.visible = true;
+        },
+        setTheme({ name, color, label }) {
+          if (that.themeInfo.color == color) {
+            return false;
+          }
+          if (that.themeInfo.label) {
+            that.$message.success(`切换主题：${label}`);
+          }
+          var theme = document.getElementById("theme-style");
+          var style = theme || document.createElement("link");
+          style.href = `/assets/cooladmin/theme/${name}.css`;
+          if (!theme) {
+            style.type = "text/css";
+            style.rel = "stylesheet";
+            style.id = "theme-style";
+            document.getElementsByTagName("head").item(0).appendChild(style);
+          }
+          // 设置主题色和路径
+          that.themeInfo.color = color;
+          that.themeInfo.url = style.href;
+          that.themeInfo.name = name;
+          localStorage.setItem('index_theme', JSON.stringify(that.themeInfo));
+          // 设置 css 变量
+          document.getElementsByTagName("body")[0].style.setProperty("--color-primary", color);
+        },
+        /*tab操作*/
+        activeItem(item, index) {
+          if (!item || this.activeTabId == item.id) {
+            return;
+          }
+          this.activeTabId = item.id;
+
+          if (index === undefined) {
+            for (var i in this.processList) {
+              if (this.processList[i].id == item.id) {
+                index = i;
+                break;
+              }
+            }
+          }
+          var diff = 50 * (index - this.activeTabIndex);//判断是往左点还是往右点，加上惯性
+          this.activeTabIndex = index;
+
+          if (index == 0 || index == this.processList.length - 1) {
+            var diff = 0;
+          }
+          var el = this.$refs[`item-${item.id}`][0];
+          if (el) {
+            that.scrollToItem(el.offsetLeft + el.clientWidth - that.$refs["scroller"].clientWidth + diff);
+          }
+        },
+        onDel(index) {
+          if (index != 0) {
+            this.processList.splice(index, 1);
+            var find = this.processList.find(e => e.id == this.activeTabId);
+            if (!find) {
+              if (index > 1) {
+                this.activeItem(this.processList[index - 1], index - 1);
+              }
+              else {
+                this.toPath();
+              }
+            }
+          }
+        },
+        toPath() {
+          var find = this.processList.find(e => e.id == this.activeTabId);
+          if (!find) {
+            var next = last(this.processList);
+            if (next) {
+              this.activeTabId = next.id;
+            }
+          }
+        },
+        toScroll(isLeft) {
+          this.scrollToItem(this.$refs["scroller"].scrollLeft + (isLeft ? -400 : 400));
+        },
+        scrollToItem(leftPos) {
+          this.$refs["scroller"].scrollTo({
+            left: leftPos,
+            behavior: "smooth"
+          });
+        },
+        leftMenuSelect(id) {
+          var find = this.processList.find(e => e.id == id);
+          if (find) {
+            this.activeItem(find);
+          }
+          else {
+            var find0 = menuJson.find(e => e.id == id);
+            if (find0) {
+              this.openPage(
+                {
+                  id: find0.id,
+                  label: find0.name,
+                  value: find0.url,
+                }
+              );
+            }
+          }
+        },
+        topMenuSelect(id) {
+          this.topActiveId = id;
+          if (!this.activeFirst) {
+            return;
+          }
+          var find = menuJson.find(e => e.pid == id);
+          if (find) {
+            var find0 = this.processList.find(e => e.id == find.id);
+            if (find0) {
+              this.activeItem(find0);
+            }
+            else {
+              this.openPage(
+                {
+                  id: find.id,
+                  label: find.name,
+                  value: find.url,
+                }
+              );
+            }
+          }
+        },
+        openPage(item) {
+          this.processList.push(item);
+          Vue.nextTick(function () {
+            setTimeout(function () {
+              that.activeItem(item, that.processList.length - 1);
+            }, 100);
+          });
+
+          this.iframeLoading = true;
+          setTimeout(function () {
+            this.iframeLoading = false;
+          }, 3000);
+        },
+        reloadItem(item) {
+          var el = this.$refs[`iframe-${item.id}`][0];
+          if (el) {
+            el.contentWindow.location.reload(true);
+            this.iframeLoading = true;
+            setTimeout(function () {
+              this.iframeLoading = false;
+            }, 3000);
+          }
+        },
+        stopDefault(e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      },
+    });
+
+    $('a.open-tab').click(function () {
+      $.fn.multitabs().create(this, true);
+      return false;
+    });
+
+    ((function ($) {
+      // 兼容 lightyear 的 MultiTabs js
+      var MultiTabs = function (element) {
+        var self = this;
+        self.$element = $(element);
+      };
+      MultiTabs.prototype = {
+        constructor: MultiTabs,
+        /**
+         * create tab and return this.
+         * @param obj           the obj to trigger multitabs
+         * @param active        if true, active tab after create
+         * @returns this        Chain structure.
+         */
+        create: function (obj, active) {
+          var url = $(obj).attr("href"),
+            text = $.trim($(obj).attr('title') || $(obj).data('title') || $(obj).text());
+
+          app.onCommand(text + '|' + url);
+          return this;
+        },
+      };
+
+      $.fn.multitabs = function () {
+        var self = $(this),
+          did = 'multitabs',
+          multitabs = $(document).data(did);
+        if (!multitabs) {
+          multitabs = new MultiTabs(this);
+          $(document).data(did, multitabs);
+        }
+        return $(document).data(did);
+      };
+    })(jQuery));
+  </script>
+</body>
+
+</html>
