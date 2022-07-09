@@ -13,5 +13,5 @@
  */
 
 return [
-    '' => \think\exception\ExceptionHandler::class,
+    '' => support\exception\Handler::class,
 ];
