@@ -130,7 +130,23 @@ extend扩展基于`composer.josn`配置
 
 ## 六、演示
 
-暂无
+### 网址
+
+1. [tp5.1] <http://f0vh2ohz.shenzhuo.vip:40035/admin>
+
+2. [webman] <http://f0vh2ohz.shenzhuo.vip:40036/admin>
+
+### 账号
+
+`admin`：`tpextadmin`
+
+### 注意事项
+
+- 请不要乱修改数据
+- 请不要上传非法内容或图片
+- 请不要上传您的重要数据到上面以防泄漏
+- 有问题请联系：ichynul#163.com (#换@)，或通过群联系。
+- 演示网站偶尔不稳定，会定期重启
 
 ## 七、功能特性
 
