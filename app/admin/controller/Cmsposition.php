@@ -123,8 +123,10 @@ class Cmsposition extends Controller
      *
      * @return mixed
      */
-    public function preview($id)
+    public function preview()
     {
+        $id = input('id', 0);
+        
         $list = CmsBanner::where('position_id', $id)->select();
 
         $tpl = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
