@@ -46,14 +46,11 @@ composer update
 
 > 注意：此方式的仓库是不带`composer`依赖`vendor`目录的，请务必运行`composer update`安装所有依赖后再访问网站。
 
-## webman1.4
-webman1.4已经发布，默认会安装此最新版本。若遇到兼容性问题，可通过以下方法退回1.3：
+## webman1.4.x
 
-修改项目根目录下的：`composer.json`
-
-`"workerman/webman-framework": "~1.3.0",`
-
-运行命令`composer u `更新，之后会退回到1.3.*
+新版本默认开启控制器后缀：`'controller_suffix' => 'Controller',`
+请关闭它，在`config/app.php`中修改
+'controller_suffix' => '',
 
 ## 二、配置
 
