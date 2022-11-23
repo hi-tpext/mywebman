@@ -49,8 +49,10 @@ composer update
 ## webman1.4.x
 
 新版本默认开启控制器后缀：`'controller_suffix' => 'Controller',`
-请关闭它，在`config/app.php`中修改
-'controller_suffix' => '',
+
+请关闭它，在`config/app.php`中修改为：
+
+`'controller_suffix' => '',`
 
 ## 二、配置
 
