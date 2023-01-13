@@ -140,9 +140,9 @@ extend扩展基于`composer.josn`配置
 
 ### 网址
 
-1. [tp5.1] <http://f0vh2ohz.shenzhuo.vip:40035/admin>
+1. [tp6.1] <http://gaosu.shenzhuo.vip:49587/admin>
 
-2. [webman] <http://f0vh2ohz.shenzhuo.vip:40036/admin>
+2. [webman] <http://gaosu.shenzhuo.vip:49588/admin>
 
 ### 账号
 
