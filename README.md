@@ -36,9 +36,9 @@ composer require ichynul/tpextmyadmin:^4.5.1
 
 composer require ichynul/tpext-builder:^3.9.1
 或
-composer require ichynul/tpext-vexipui:^5.0.1
+composer require ichynul/tpext-vexipui:^5.0.5
 或
-composer require ichynul/tpext-tinyvue:^5.0.1
+composer require ichynul/tpext-tinyvue:^5.1.8
 
 #更多说明 见 https://github.com/hi-tpext/tpext-myadmin/tree/4.5
 ```
