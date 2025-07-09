@@ -28,10 +28,10 @@ composer require ichynul/tpextmyadmin:^4.0.6
 
 ```bash
 
-# 版本webman 2.0以上使用[tpext-myadmin] 4.5分支 https://github.com/hi-tpext/tpext-myadmin/tree/4.5
-# composer require ichynul/tpextmyadmin:^4.5.1
+# 版本webman 2.0以上使用[tpext-myadmin] 4.5分支
+composer require ichynul/tpextmyadmin:^4.5.1
 
-#此版本不带 UI依赖 tpextbuilder
+#4.5分支版本不带 UI依赖 tpextbuilder
 #需要选择安装一个：
 
 composer require ichynul/tpext-builder:^3.9.1
@@ -62,6 +62,8 @@ composer update
 此版本为1.4.x可升级到1.6.x
 
 升级到 2.1.x，需要一些改动，见https://www.workerman.net/doc/webman/upgrade/2-1.html
+
+---
 
 > 相关演示代码在<https://github.com/hi-tpext/mywebman> `app/admin/`中，数据库脚本由`[myadmindata]`扩展提供，请下载安装。
 
