@@ -34,7 +34,7 @@ composer require ichynul/tpextmyadmin:^4.5.1
 #4.5分支版本不带 UI依赖 tpextbuilder
 #需要选择安装一个：
 
-composer require ichynul/tpext-builder:^3.9.1
+composer require ichynul/tpextbuilder:^3.9.1
 或
 composer require ichynul/tpext-vexipui:^5.0.5
 或
