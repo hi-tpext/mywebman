@@ -14,21 +14,40 @@
 
 ### 方式一、使用 `composer` 全新安装
 
-安装 [webman] 和 [tpextmyadmin] https://github.com/hi-tpext/tpextmyadmin/tree/4.0
+安装 [webman] 和 [tpextmyadmin] https://github.com/hi-tpext/tpextmyadmin/tree/4.0 / 4.5
 
 ```bash
 composer create-project workerman/webman mywebman
 
 cd mywebman
 
+# 版本webman 1.6以下使用[tpext-myadmin] 4.0分支
 composer require ichynul/tpextmyadmin:^4.0.6
+
+```
+
+```bash
+
+# 版本webman 2.0以上使用[tpext-myadmin] 4.5分支
+composer require ichynul/tpextmyadmin:^4.5.1
+
+#4.5分支版本不带 UI依赖 tpextbuilder
+#需要选择安装一个：
+
+composer require ichynul/tpextbuilder:^3.9.1
+或
+composer require ichynul/tpext-vexipui:^5.0.5
+或
+composer require ichynul/tpext-tinyvue:^5.1.8
+
+#更多说明 见 https://github.com/hi-tpext/tpext-myadmin/tree/4.5
 ```
 
 > 安装完毕，此安装版是最小模式，只包含基本的后台功能，建议开发新项目时使用此方式。
 
 ---
 
-### 方式二、使用 `git` 安装演示站
+### 方式二、使用 `git` 安装演示站 
 
 > git拉取，依次执行以下命令，`mywebman` 为新项目目录，可自行调整
 
@@ -40,13 +59,19 @@ cd mywebman
 composer update
 ```
 
+此版本为1.4.x可升级到1.6.x
+
+升级到 2.1.x，需要一些改动，见https://www.workerman.net/doc/webman/upgrade/2-1.html
+
+---
+
 > 相关演示代码在<https://github.com/hi-tpext/mywebman> `app/admin/`中，数据库脚本由`[myadmindata]`扩展提供，请下载安装。
 
 > 安装完毕，此安装版是最和演示站同步的，如果你想自己搭建演示站可用此方式。
 
 > 注意：此方式的仓库是不带`composer`依赖`vendor`目录的，请务必运行`composer update`安装所有依赖后再访问网站。
 
-## webman1.4.x
+## webman1.4.x / 1.5.x / 1.6.x
 
 新版本默认开启控制器后缀：`'controller_suffix' => 'Controller',`
 
