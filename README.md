@@ -14,33 +14,20 @@
 
 ### 方式一、使用 `composer` 全新安装
 
-安装 [webman] 和 [tpextmyadmin] https://github.com/hi-tpext/tpextmyadmin/tree/4.0 / 4.5
+安装 [webman]v1 和 [tpextmyadmin] https://github.com/hi-tpext/tpextmyadmin/tree/4.0
 
 ```bash
 composer create-project workerman/webman mywebman
 
 cd mywebman
 
-# 版本webman 1.6以下使用[tpext-myadmin] 4.0分支
-composer require ichynul/tpextmyadmin:^4.0.6
-
 ```
 
 ```bash
 
-# 版本webman 2.0以上使用[tpext-myadmin] 4.5分支
-composer require ichynul/tpextmyadmin:^4.5.1
+# 版本webman 1.6及以下使用[tpext-myadmin] 4.0分支
+composer require ichynul/tpextmyadmin:^4.0.6
 
-#4.5分支版本不带 UI依赖 tpextbuilder
-#需要选择安装一个：
-
-composer require ichynul/tpextbuilder:^3.9.1
-或
-composer require ichynul/tpext-vexipui:^5.0.5
-或
-composer require ichynul/tpext-tinyvue:^5.1.8
-
-#更多说明 见 https://github.com/hi-tpext/tpext-myadmin/tree/4.5
 ```
 
 > 安装完毕，此安装版是最小模式，只包含基本的后台功能，建议开发新项目时使用此方式。
@@ -52,7 +39,7 @@ composer require ichynul/tpext-tinyvue:^5.1.8
 > git拉取，依次执行以下命令，`mywebman` 为新项目目录，可自行调整
 
 ```bash
-git clone https://github.com/hi-tpext/mywebman.git mywebman
+git clone https://github.com/hi-tpext/mywebman.git -b 1.x mywebman
 
 cd mywebman
 
@@ -61,9 +48,35 @@ composer update
 
 此版本为1.4.x可升级到1.6.x
 
-升级到 2.1.x，需要一些改动，见https://www.workerman.net/doc/webman/upgrade/2-1.html
+要升级到 2.1.x，使用本仓库的 `2.1` 分支
 
 ---
+
+### 运行
+
+#### windows用户
+
+双击 windows.bat 或者运行 `php windows.php` 启动
+
+#### linux用户
+
+调试方式运行（用于开发调试，打印数据会显示在终端，终端关闭后webman服务也随之关闭）
+
+```bash
+php start.php start
+```
+
+守护进程方式运行（用于正式环境，打印数据不会显示在终端，终端关闭后webman服务会持续运行）
+
+```bash
+php start.php start -d
+```
+
+#### 提示
+如果有报错，很可能是有函数被禁用，参考函数禁用检查解除禁用
+
+---
+
 
 > 相关演示代码在<https://github.com/hi-tpext/mywebman> `app/admin/`中，数据库脚本由`[myadmindata]`扩展提供，请下载安装。
 
