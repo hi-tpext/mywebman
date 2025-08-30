@@ -4,77 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0fc7c7a492a446fe005a51bd29736db",
+    "content-hash": "f035c4133ab97c4a7fb2926bcf8693f0",
     "packages": [
         {
-            "name": "gregwar/captcha",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Gregwar/Captcha.git",
-                "reference": "6e5b61b66ac89885b505153f4ef9a74ffa5b3074"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Gregwar/Captcha/zipball/6e5b61b66ac89885b505153f4ef9a74ffa5b3074",
-                "reference": "6e5b61b66ac89885b505153f4ef9a74ffa5b3074",
-                "shasum": ""
-            },
-            "require": {
-                "ext-gd": "*",
-                "ext-mbstring": "*",
-                "php": ">=5.3.0",
-                "symfony/finder": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Gregwar\\": "src/Gregwar"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Grégoire Passault",
-                    "email": "g.passault@gmail.com",
-                    "homepage": "http://www.gregwar.com/"
-                },
-                {
-                    "name": "Jeremy Livingston",
-                    "email": "jeremy.j.livingston@gmail.com"
-                }
-            ],
-            "description": "Captcha generator",
-            "homepage": "https://github.com/Gregwar/Captcha",
-            "keywords": [
-                "bot",
-                "captcha",
-                "spam"
-            ],
-            "support": {
-                "issues": "https://github.com/Gregwar/Captcha/issues",
-                "source": "https://github.com/Gregwar/Captcha/tree/v1.2.0"
-            },
-            "time": "2023-03-24T22:12:41+00:00"
-        },
-        {
             "name": "guzzlehttp/psr7",
-            "version": "2.5.0",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "b635f279edd83fc275f822a1188157ffea568ff6"
+                "reference": "21dc724a0583619cd1652f673303492272778051"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/b635f279edd83fc275f822a1188157ffea568ff6",
-                "reference": "b635f279edd83fc275f822a1188157ffea568ff6",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/21dc724a0583619cd1652f673303492272778051",
+                "reference": "21dc724a0583619cd1652f673303492272778051",
                 "shasum": ""
             },
             "require": {
@@ -88,9 +31,9 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
-                "http-interop/http-factory-tests": "^0.9",
-                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
+                "bamarni/composer-bin-plugin": "^1.8.2",
+                "http-interop/http-factory-tests": "0.9.0",
+                "phpunit/phpunit": "^8.5.44 || ^9.6.25"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
@@ -161,7 +104,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.5.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.8.0"
             },
             "funding": [
                 {
@@ -177,7 +120,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-17T16:11:26+00:00"
+            "time": "2025-08-23T21:21:41+00:00"
         },
         {
             "name": "ichynul/builder-mdeditor",
@@ -225,16 +168,16 @@
         },
         {
             "name": "ichynul/lightyearadmin",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hi-tpext/lightyearadmin.git",
-                "reference": "877186d947cea79b82fff75f9f1f1456970d90f9"
+                "reference": "9e0bb3501dbe32bc95f8c76a7981c5e1771eaed1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/lightyearadmin/zipball/877186d947cea79b82fff75f9f1f1456970d90f9",
-                "reference": "877186d947cea79b82fff75f9f1f1456970d90f9",
+                "url": "https://api.github.com/repos/hi-tpext/lightyearadmin/zipball/9e0bb3501dbe32bc95f8c76a7981c5e1771eaed1",
+                "reference": "9e0bb3501dbe32bc95f8c76a7981c5e1771eaed1",
                 "shasum": ""
             },
             "type": "library",
@@ -263,31 +206,32 @@
             ],
             "support": {
                 "issues": "https://github.com/hi-tpext/lightyearadmin/issues",
-                "source": "https://github.com/hi-tpext/lightyearadmin/tree/1.2.1"
+                "source": "https://github.com/hi-tpext/lightyearadmin/tree/1.2.2"
             },
-            "time": "2023-03-09T01:36:12+00:00"
+            "time": "2023-04-05T10:30:50+00:00"
         },
         {
             "name": "ichynul/tpext",
-            "version": "4.2.3",
+            "version": "4.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hi-tpext/tpext.git",
-                "reference": "ff28f33862d8e22e33463c4666b5cb14e4517515"
+                "reference": "9cd5b46286d4f49b70801f11172edeebe9890ea2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpext/zipball/ff28f33862d8e22e33463c4666b5cb14e4517515",
-                "reference": "ff28f33862d8e22e33463c4666b5cb14e4517515",
+                "url": "https://api.github.com/repos/hi-tpext/tpext/zipball/9cd5b46286d4f49b70801f11172edeebe9890ea2",
+                "reference": "9cd5b46286d4f49b70801f11172edeebe9890ea2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2",
-                "topthink/think-template": "^2.0",
+                "php": ">=8.0",
+                "topthink/think-template": "^3.0",
+                "topthink/think-validate": "^3.0",
                 "webman/event": "^1.0.2",
-                "webman/think-cache": "^1.0",
-                "webman/think-orm": "^1.0",
-                "workerman/webman-framework": "^1.3.20"
+                "webman/think-cache": "^2.0",
+                "webman/think-orm": "^2.0",
+                "workerman/webman-framework": "^2.0.1"
             },
             "type": "library",
             "autoload": {
@@ -316,66 +260,22 @@
             ],
             "support": {
                 "issues": "https://github.com/hi-tpext/tpext/issues",
-                "source": "https://github.com/hi-tpext/tpext/tree/4.2.3"
+                "source": "https://github.com/hi-tpext/tpext/tree/4.5.8"
             },
-            "time": "2023-03-25T02:52:25+00:00"
+            "time": "2025-07-15T08:40:47+00:00"
         },
         {
-            "name": "ichynul/tpextareacity",
-            "version": "1.2.4",
+            "name": "ichynul/tpext-tinyvue",
+            "version": "5.1.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hi-tpext/tpextareacity.git",
-                "reference": "b81abf3ee270b47471c4a03d05a79c232871c85c"
+                "url": "https://github.com/hi-tpext/tpext-tinyvue.git",
+                "reference": "6400fa2e18d148bd7aaae9d811c2f6a51e803ec4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpextareacity/zipball/b81abf3ee270b47471c4a03d05a79c232871c85c",
-                "reference": "b81abf3ee270b47471c4a03d05a79c232871c85c",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "./helper.php"
-                ],
-                "psr-4": {
-                    "tpext\\areacity\\": "./"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "ichynul",
-                    "email": "ichynul@outlook.com"
-                }
-            ],
-            "description": "thinkphp extension",
-            "homepage": "http://www.ynyysc.com/",
-            "keywords": [
-                "thinkphp"
-            ],
-            "support": {
-                "issues": "https://github.com/hi-tpext/tpextareacity/issues",
-                "source": "https://github.com/hi-tpext/tpextareacity/tree/1.2.4"
-            },
-            "time": "2023-03-23T12:13:40+00:00"
-        },
-        {
-            "name": "ichynul/tpextbuilder",
-            "version": "3.9.112",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hi-tpext/tpextbuilder.git",
-                "reference": "4eb745c6cc0448271c1ef0d876b0f9962eade8cf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpextbuilder/zipball/4eb745c6cc0448271c1ef0d876b0f9962eade8cf",
-                "reference": "4eb745c6cc0448271c1ef0d876b0f9962eade8cf",
+                "url": "https://api.github.com/repos/hi-tpext/tpext-tinyvue/zipball/6400fa2e18d148bd7aaae9d811c2f6a51e803ec4",
+                "reference": "6400fa2e18d148bd7aaae9d811c2f6a51e803ec4",
                 "shasum": ""
             },
             "require": {
@@ -404,7 +304,7 @@
             "authors": [
                 {
                     "name": "ichynul",
-                    "email": "ichynul@outlook.com"
+                    "email": "ichynul@163.com"
                 }
             ],
             "description": "thinkphp extension",
@@ -413,23 +313,23 @@
                 "thinkphp"
             ],
             "support": {
-                "issues": "https://github.com/hi-tpext/tpextbuilder/issues",
-                "source": "https://github.com/hi-tpext/tpextbuilder/tree/3.9.112"
+                "issues": "https://github.com/hi-tpext/tpext-tinyvue/issues",
+                "source": "https://github.com/hi-tpext/tpext-tinyvue/tree/5.1.8"
             },
-            "time": "2023-03-31T16:46:37+00:00"
+            "time": "2025-06-25T05:30:04+00:00"
         },
         {
             "name": "ichynul/tpextmanager",
-            "version": "3.4.2",
+            "version": "3.6.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hi-tpext/tpextmanager.git",
-                "reference": "98a117d33653bd713d110c4c63bcf155db1dc45d"
+                "url": "https://github.com/hi-tpext/tpext-manager.git",
+                "reference": "5ce8cadf7e42f21842fe515010fc37aa6b90ff99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpextmanager/zipball/98a117d33653bd713d110c4c63bcf155db1dc45d",
-                "reference": "98a117d33653bd713d110c4c63bcf155db1dc45d",
+                "url": "https://api.github.com/repos/hi-tpext/tpext-manager/zipball/5ce8cadf7e42f21842fe515010fc37aa6b90ff99",
+                "reference": "5ce8cadf7e42f21842fe515010fc37aa6b90ff99",
                 "shasum": ""
             },
             "require": {
@@ -467,32 +367,31 @@
                 "thinkphp"
             ],
             "support": {
-                "issues": "https://github.com/hi-tpext/tpextmanager/issues",
-                "source": "https://github.com/hi-tpext/tpextmanager/tree/3.4.2"
+                "issues": "https://github.com/hi-tpext/tpext-manager/issues",
+                "source": "https://github.com/hi-tpext/tpext-manager/tree/3.6.2"
             },
-            "time": "2023-03-11T08:56:40+00:00"
+            "time": "2025-08-18T02:22:54+00:00"
         },
         {
             "name": "ichynul/tpextmyadmin",
-            "version": "4.1.9",
+            "version": "4.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hi-tpext/tpextmyadmin.git",
-                "reference": "ea9867a838b2d84d6e465986fc140ba6b7d0bcbd"
+                "url": "https://github.com/hi-tpext/tpext-myadmin.git",
+                "reference": "49253f234aa516c96ffdeb585f3d4592af8c48cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpextmyadmin/zipball/ea9867a838b2d84d6e465986fc140ba6b7d0bcbd",
-                "reference": "ea9867a838b2d84d6e465986fc140ba6b7d0bcbd",
+                "url": "https://api.github.com/repos/hi-tpext/tpext-myadmin/zipball/49253f234aa516c96ffdeb585f3d4592af8c48cc",
+                "reference": "49253f234aa516c96ffdeb585f3d4592af8c48cc",
                 "shasum": ""
             },
             "require": {
-                "gregwar/captcha": "^1.0",
                 "ichynul/lightyearadmin": "^1.1.8",
-                "ichynul/tpext": "^4.0.9",
-                "ichynul/tpextbuilder": "^3.7.2",
-                "ichynul/tpextmanager": "^3.3.6",
-                "matthiasmullie/minify": "^1.3"
+                "ichynul/tpext": "^4.5.0",
+                "ichynul/tpextmanager": "^3.0",
+                "matthiasmullie/minify": "^1.3",
+                "webman/captcha": "^1.0.5"
             },
             "type": "library",
             "autoload": {
@@ -520,10 +419,16 @@
                 "thinkphp"
             ],
             "support": {
-                "issues": "https://github.com/hi-tpext/tpextmyadmin/issues",
-                "source": "https://github.com/hi-tpext/tpextmyadmin/tree/4.1.9"
+                "issues": "https://github.com/hi-tpext/tpext-myadmin/issues",
+                "source": "https://github.com/hi-tpext/tpext-myadmin/tree/4.5.1"
             },
-            "time": "2023-03-31T15:42:04+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/ichynul",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-04-28T03:17:02+00:00"
         },
         {
             "name": "intervention/image",
@@ -555,16 +460,16 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                },
                 "laravel": {
-                    "providers": [
-                        "Intervention\\Image\\ImageServiceProvider"
-                    ],
                     "aliases": {
                         "Image": "Intervention\\Image\\Facades\\Image"
-                    }
+                    },
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -611,16 +516,16 @@
         },
         {
             "name": "matthiasmullie/minify",
-            "version": "1.3.70",
+            "version": "1.3.75",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthiasmullie/minify.git",
-                "reference": "2807d9f9bece6877577ad44acb5c801bb3ae536b"
+                "reference": "76ba4a5f555fd7bf4aa408af608e991569076671"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/2807d9f9bece6877577ad44acb5c801bb3ae536b",
-                "reference": "2807d9f9bece6877577ad44acb5c801bb3ae536b",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/76ba4a5f555fd7bf4aa408af608e991569076671",
+                "reference": "76ba4a5f555fd7bf4aa408af608e991569076671",
                 "shasum": ""
             },
             "require": {
@@ -631,8 +536,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": ">=2.0",
                 "matthiasmullie/scrapbook": ">=1.3",
-                "phpunit/phpunit": ">=4.8",
-                "squizlabs/php_codesniffer": ">=3.0"
+                "phpunit/phpunit": ">=4.8"
             },
             "suggest": {
                 "psr/cache-implementation": "Cache implementation to use with Minify::cache"
@@ -670,7 +574,7 @@
             ],
             "support": {
                 "issues": "https://github.com/matthiasmullie/minify/issues",
-                "source": "https://github.com/matthiasmullie/minify/tree/1.3.70"
+                "source": "https://github.com/matthiasmullie/minify/tree/1.3.75"
             },
             "funding": [
                 {
@@ -678,7 +582,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-09T12:56:44+00:00"
+            "time": "2025-06-25T09:56:19+00:00"
         },
         {
             "name": "matthiasmullie/path-converter",
@@ -735,16 +639,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.9.1",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "f259e2b15fb95494c83f52d3caad003bbf5ffaa1"
+                "reference": "5cf826f2991858b54d5c3809bee745560a1042a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f259e2b15fb95494c83f52d3caad003bbf5ffaa1",
-                "reference": "f259e2b15fb95494c83f52d3caad003bbf5ffaa1",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5cf826f2991858b54d5c3809bee745560a1042a7",
+                "reference": "5cf826f2991858b54d5c3809bee745560a1042a7",
                 "shasum": ""
             },
             "require": {
@@ -765,8 +669,8 @@
                 "mongodb/mongodb": "^1.8",
                 "php-amqplib/php-amqplib": "~2.4 || ^3",
                 "phpspec/prophecy": "^1.15",
-                "phpstan/phpstan": "^0.12.91",
-                "phpunit/phpunit": "^8.5.14",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^8.5.38 || ^9.6.19",
                 "predis/predis": "^1.1 || ^2.0",
                 "rollbar/rollbar": "^1.3 || ^2 || ^3",
                 "ruflin/elastica": "^7",
@@ -821,7 +725,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.9.1"
+                "source": "https://github.com/Seldaek/monolog/tree/2.10.0"
             },
             "funding": [
                 {
@@ -833,7 +737,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-06T13:44:46+00:00"
+            "time": "2024-11-12T12:43:37+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -884,120 +788,6 @@
                 "source": "https://github.com/nikic/FastRoute/tree/master"
             },
             "time": "2018-02-13T20:26:39+00:00"
-        },
-        {
-            "name": "opis/closure",
-            "version": "3.6.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/opis/closure.git",
-                "reference": "3d81e4309d2a927abbe66df935f4bb60082805ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/3d81e4309d2a927abbe66df935f4bb60082805ad",
-                "reference": "3d81e4309d2a927abbe66df935f4bb60082805ad",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.4 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "jeremeamia/superclosure": "^2.0",
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.6.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "functions.php"
-                ],
-                "psr-4": {
-                    "Opis\\Closure\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marius Sarca",
-                    "email": "marius.sarca@gmail.com"
-                },
-                {
-                    "name": "Sorin Sarca",
-                    "email": "sarca_sorin@hotmail.com"
-                }
-            ],
-            "description": "A library that can be used to serialize closures (anonymous functions) and arbitrary objects.",
-            "homepage": "https://opis.io/closure",
-            "keywords": [
-                "anonymous functions",
-                "closure",
-                "function",
-                "serializable",
-                "serialization",
-                "serialize"
-            ],
-            "support": {
-                "issues": "https://github.com/opis/closure/issues",
-                "source": "https://github.com/opis/closure/tree/3.6.3"
-            },
-            "time": "2022-01-27T09:35:39+00:00"
-        },
-        {
-            "name": "psr/cache",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/cache.git",
-                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
-                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Cache\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for caching libraries",
-            "keywords": [
-                "cache",
-                "psr",
-                "psr-6"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/cache/tree/master"
-            },
-            "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/container",
@@ -1054,20 +844,20 @@
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.0",
+                "php": ">=7.1",
                 "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
@@ -1091,7 +881,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -1103,9 +893,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-factory"
             },
-            "time": "2023-04-10T20:10:41+00:00"
+            "time": "2024-04-15T12:06:14+00:00"
         },
         {
             "name": "psr/http-message",
@@ -1162,16 +952,16 @@
         },
         {
             "name": "psr/log",
-            "version": "2.0.0",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "ef29f6d262798707a9edd554e2b82517ef3a9376"
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/ef29f6d262798707a9edd554e2b82517ef3a9376",
-                "reference": "ef29f6d262798707a9edd554e2b82517ef3a9376",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
                 "shasum": ""
             },
             "require": {
@@ -1180,7 +970,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
@@ -1206,31 +996,31 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/2.0.0"
+                "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
-            "time": "2021-07-14T16:41:46+00:00"
+            "time": "2024-09-11T13:17:53+00:00"
         },
         {
             "name": "psr/simple-cache",
-            "version": "1.0.1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/simple-cache.git",
-                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
-                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=8.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -1245,7 +1035,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interfaces for simple caching",
@@ -1257,9 +1047,9 @@
                 "simple-cache"
             ],
             "support": {
-                "source": "https://github.com/php-fig/simple-cache/tree/master"
+                "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
             },
-            "time": "2017-10-23T01:57:42+00:00"
+            "time": "2021-10-29T13:26:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -1306,135 +1096,26 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
-            "name": "symfony/finder",
-            "version": "v6.2.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "20808dc6631aecafbe67c186af5dcb370be3a0eb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/20808dc6631aecafbe67c186af5dcb370be3a0eb",
-                "reference": "20808dc6631aecafbe67c186af5dcb370be3a0eb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1"
-            },
-            "require-dev": {
-                "symfony/filesystem": "^6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Finds files and directories via an intuitive fluent interface",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/finder/tree/v6.2.7"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2023-02-16T09:57:23+00:00"
-        },
-        {
-            "name": "topthink/think-cache",
-            "version": "v2.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/top-think/think-cache.git",
-                "reference": "7b6ace7eb9b569fe95000b254000bbafa3c7dfee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-cache/zipball/7b6ace7eb9b569fe95000b254000bbafa3c7dfee",
-                "reference": "7b6ace7eb9b569fe95000b254000bbafa3c7dfee",
-                "shasum": ""
-            },
-            "require": {
-                "opis/closure": "^3.1",
-                "php": ">=7.1.0",
-                "psr/cache": "~1.0",
-                "psr/simple-cache": "^1.0",
-                "topthink/think-container": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [],
-                "psr-4": {
-                    "think\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "liu21st",
-                    "email": "liu21st@gmail.com"
-                }
-            ],
-            "description": "Cache Manager",
-            "support": {
-                "issues": "https://github.com/top-think/think-cache/issues",
-                "source": "https://github.com/top-think/think-cache/tree/v2.0.7"
-            },
-            "time": "2023-01-16T08:09:09+00:00"
-        },
-        {
             "name": "topthink/think-container",
-            "version": "v2.0.5",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-container.git",
-                "reference": "2189b39e42af2c14203ed4372b92e38989e9dabb"
+                "reference": "b2df244be1e7399ad4c8be1ccc40ed57868f730a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-container/zipball/2189b39e42af2c14203ed4372b92e38989e9dabb",
-                "reference": "2189b39e42af2c14203ed4372b92e38989e9dabb",
+                "url": "https://api.github.com/repos/top-think/think-container/zipball/b2df244be1e7399ad4c8be1ccc40ed57868f730a",
+                "reference": "b2df244be1e7399ad4c8be1ccc40ed57868f730a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0",
-                "psr/container": "^1.0|^2.0",
+                "php": ">=8.0",
+                "psr/container": "^2.0",
                 "topthink/think-helper": "^3.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.0|^8.0"
+                "phpunit/phpunit": "^9.5"
             },
             "type": "library",
             "autoload": {
@@ -1456,22 +1137,22 @@
             "description": "PHP Container & Facade Manager",
             "support": {
                 "issues": "https://github.com/top-think/think-container/issues",
-                "source": "https://github.com/top-think/think-container/tree/v2.0.5"
+                "source": "https://github.com/top-think/think-container/tree/v3.0.2"
             },
-            "time": "2022-05-23T06:24:54+00:00"
+            "time": "2025-04-07T03:21:51+00:00"
         },
         {
             "name": "topthink/think-helper",
-            "version": "v3.1.6",
+            "version": "v3.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-helper.git",
-                "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff"
+                "reference": "1d6ada9b9f3130046bf6922fe1bd159c8d88a33c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-helper/zipball/769acbe50a4274327162f9c68ec2e89a38eb2aff",
-                "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff",
+                "url": "https://api.github.com/repos/top-think/think-helper/zipball/1d6ada9b9f3130046bf6922fe1bd159c8d88a33c",
+                "reference": "1d6ada9b9f3130046bf6922fe1bd159c8d88a33c",
                 "shasum": ""
             },
             "require": {
@@ -1502,38 +1183,43 @@
             "description": "The ThinkPHP6 Helper Package",
             "support": {
                 "issues": "https://github.com/top-think/think-helper/issues",
-                "source": "https://github.com/top-think/think-helper/tree/v3.1.6"
+                "source": "https://github.com/top-think/think-helper/tree/v3.1.11"
             },
-            "time": "2021-12-15T04:27:55+00:00"
+            "time": "2025-04-07T06:55:59+00:00"
         },
         {
             "name": "topthink/think-orm",
-            "version": "v2.0.60",
+            "version": "v4.0.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-orm.git",
-                "reference": "8bc34a4307fa27186c0e96a9b3de3cb23aa1ed46"
+                "reference": "ddae72d5ff4d953d3d8cc526fd9c50e8862ce2cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-orm/zipball/8bc34a4307fa27186c0e96a9b3de3cb23aa1ed46",
-                "reference": "8bc34a4307fa27186c0e96a9b3de3cb23aa1ed46",
+                "url": "https://api.github.com/repos/top-think/think-orm/zipball/ddae72d5ff4d953d3d8cc526fd9c50e8862ce2cc",
+                "reference": "ddae72d5ff4d953d3d8cc526fd9c50e8862ce2cc",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-pdo": "*",
-                "php": ">=7.1.0",
-                "psr/log": "^1.0|^2.0",
-                "psr/simple-cache": "^1.0|^2.0",
-                "topthink/think-helper": "^3.1"
+                "php": ">=8.0.0",
+                "psr/log": ">=1.0",
+                "psr/simple-cache": "^3.0",
+                "topthink/think-helper": "^3.1",
+                "topthink/think-validate": "^3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7|^8|^9.5"
+                "phpunit/phpunit": "^9.6|^10"
+            },
+            "suggest": {
+                "ext-mongodb": "provide mongodb support"
             },
             "type": "library",
             "autoload": {
                 "files": [
+                    "src/helper.php",
                     "stubs/load_stubs.php"
                 ],
                 "psr-4": {
@@ -1550,34 +1236,34 @@
                     "email": "liu21st@gmail.com"
                 }
             ],
-            "description": "think orm",
+            "description": "the PHP Database&ORM Framework",
             "keywords": [
                 "database",
                 "orm"
             ],
             "support": {
                 "issues": "https://github.com/top-think/think-orm/issues",
-                "source": "https://github.com/top-think/think-orm/tree/v2.0.60"
+                "source": "https://github.com/top-think/think-orm/tree/v4.0.50"
             },
-            "time": "2023-03-19T04:51:56+00:00"
+            "time": "2025-08-26T05:32:22+00:00"
         },
         {
             "name": "topthink/think-template",
-            "version": "v2.0.9",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-template.git",
-                "reference": "6d25642ae0e306166742fd7073dc7a159e18073c"
+                "reference": "0b88bd449f0f7626dd75b05f557c8bc208c08b0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-template/zipball/6d25642ae0e306166742fd7073dc7a159e18073c",
-                "reference": "6d25642ae0e306166742fd7073dc7a159e18073c",
+                "url": "https://api.github.com/repos/top-think/think-template/zipball/0b88bd449f0f7626dd75b05f557c8bc208c08b0c",
+                "reference": "0b88bd449f0f7626dd75b05f557c8bc208c08b0c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.0",
-                "psr/simple-cache": "^1.0"
+                "php": ">=8.0.0",
+                "psr/simple-cache": ">=1.0"
             },
             "type": "library",
             "autoload": {
@@ -1598,22 +1284,124 @@
             "description": "the php template engine",
             "support": {
                 "issues": "https://github.com/top-think/think-template/issues",
-                "source": "https://github.com/top-think/think-template/tree/v2.0.9"
+                "source": "https://github.com/top-think/think-template/tree/v3.0.2"
             },
-            "time": "2023-02-14T10:50:39+00:00"
+            "time": "2024-10-16T03:41:06+00:00"
         },
         {
-            "name": "webman/event",
-            "version": "v1.0.4",
+            "name": "topthink/think-validate",
+            "version": "v3.0.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webman-php/event.git",
-                "reference": "f4478941c3b7efa4d7e9c063f2f6efd7ee3071a7"
+                "url": "https://github.com/top-think/think-validate.git",
+                "reference": "85063f6d4ef8ed122f17a36179dc3e0949b30988"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/event/zipball/f4478941c3b7efa4d7e9c063f2f6efd7ee3071a7",
-                "reference": "f4478941c3b7efa4d7e9c063f2f6efd7ee3071a7",
+                "url": "https://api.github.com/repos/top-think/think-validate/zipball/85063f6d4ef8ed122f17a36179dc3e0949b30988",
+                "reference": "85063f6d4ef8ed122f17a36179dc3e0949b30988",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "topthink/think-container": ">=3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helper.php"
+                ],
+                "psr-4": {
+                    "think\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "liu21st",
+                    "email": "liu21st@gmail.com"
+                }
+            ],
+            "description": "think validate",
+            "support": {
+                "issues": "https://github.com/top-think/think-validate/issues",
+                "source": "https://github.com/top-think/think-validate/tree/v3.0.7"
+            },
+            "time": "2025-06-11T05:51:40+00:00"
+        },
+        {
+            "name": "webman/captcha",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webman-php/captcha.git",
+                "reference": "0b2645b813466e4e70bff311511364080bad2ec5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webman-php/captcha/zipball/0b2645b813466e4e70bff311511364080bad2ec5",
+                "reference": "0b2645b813466e4e70bff311511364080bad2ec5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webman\\Captcha\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "walkor",
+                    "email": "walkor@workerman.net"
+                },
+                {
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                },
+                {
+                    "name": "Jeremy Livingston",
+                    "email": "jeremy.j.livingston@gmail.com"
+                }
+            ],
+            "description": "Captcha generator",
+            "keywords": [
+                "bot",
+                "captcha",
+                "spam"
+            ],
+            "support": {
+                "source": "https://github.com/webman-php/captcha/tree/v1.0.5"
+            },
+            "time": "2025-03-01T08:43:36+00:00"
+        },
+        {
+            "name": "webman/event",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webman-php/event.git",
+                "reference": "b1c3f6b70fd290e48288703d59bead0e28f9fb84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webman-php/event/zipball/b1c3f6b70fd290e48288703d59bead0e28f9fb84",
+                "reference": "b1c3f6b70fd290e48288703d59bead0e28f9fb84",
                 "shasum": ""
             },
             "type": "library",
@@ -1629,30 +1417,33 @@
             "description": "Webman event plugin",
             "support": {
                 "issues": "https://github.com/webman-php/event/issues",
-                "source": "https://github.com/webman-php/event/tree/v1.0.4"
+                "source": "https://github.com/webman-php/event/tree/v1.0.5"
             },
-            "time": "2023-03-28T04:01:23+00:00"
+            "time": "2023-12-04T09:22:12+00:00"
         },
         {
             "name": "webman/think-cache",
-            "version": "v1.0.2",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webman-php/think-cache.git",
-                "reference": "0420d03a564e3513b7578ec475c6699ec02cd081"
+                "reference": "cf9dcfe9afe8d7395d2cadce51a456bcf8ee53bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/think-cache/zipball/0420d03a564e3513b7578ec475c6699ec02cd081",
-                "reference": "0420d03a564e3513b7578ec475c6699ec02cd081",
+                "url": "https://api.github.com/repos/webman-php/think-cache/zipball/cf9dcfe9afe8d7395d2cadce51a456bcf8ee53bd",
+                "reference": "cf9dcfe9afe8d7395d2cadce51a456bcf8ee53bd",
                 "shasum": ""
             },
             "require": {
-                "topthink/think-cache": "^2.0.6"
+                "psr/simple-cache": "^1.0|^2.0|^3.0",
+                "topthink/think-container": "^2.0|^3.0",
+                "workerman/webman-framework": "^2.1 || dev-master"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
+                    "support\\": "src/support",
                     "Webman\\ThinkCache\\": "src"
                 }
             },
@@ -1662,31 +1453,34 @@
             ],
             "support": {
                 "issues": "https://github.com/webman-php/think-cache/issues",
-                "source": "https://github.com/webman-php/think-cache/tree/v1.0.2"
+                "source": "https://github.com/webman-php/think-cache/tree/v2.1.2"
             },
-            "time": "2023-01-12T07:25:39+00:00"
+            "time": "2025-05-08T03:32:41+00:00"
         },
         {
             "name": "webman/think-orm",
-            "version": "v1.0.13",
+            "version": "v2.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webman-php/think-orm.git",
-                "reference": "56174ec013331a8d52cbf11cfa85b435f9e59b63"
+                "reference": "9380f0fa22b7d28926c5f7b5b8f35b068f27e846"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/think-orm/zipball/56174ec013331a8d52cbf11cfa85b435f9e59b63",
-                "reference": "56174ec013331a8d52cbf11cfa85b435f9e59b63",
+                "url": "https://api.github.com/repos/webman-php/think-orm/zipball/9380f0fa22b7d28926c5f7b5b8f35b068f27e846",
+                "reference": "9380f0fa22b7d28926c5f7b5b8f35b068f27e846",
                 "shasum": ""
             },
             "require": {
-                "topthink/think-orm": "^2.0.53",
-                "workerman/webman-framework": "^1.2.1"
+                "php": ">=8.1",
+                "topthink/think-container": "^2.0|^3.0",
+                "topthink/think-orm": "^2.0.53 || ^3.0.0 || ^4.0.30 || dev-master",
+                "workerman/webman-framework": "^2.1 || dev-master"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
+                    "support\\": "src/support",
                     "Webman\\ThinkOrm\\": "src"
                 }
             },
@@ -1696,36 +1490,79 @@
             ],
             "support": {
                 "issues": "https://github.com/webman-php/think-orm/issues",
-                "source": "https://github.com/webman-php/think-orm/tree/v1.0.13"
+                "source": "https://github.com/webman-php/think-orm/tree/v2.1.7"
             },
-            "time": "2023-03-25T02:04:10+00:00"
+            "time": "2025-07-11T07:26:58+00:00"
         },
         {
-            "name": "workerman/webman-framework",
-            "version": "v1.5.4",
+            "name": "workerman/coroutine",
+            "version": "v1.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/walkor/webman-framework.git",
-                "reference": "7af37a5351c80e79f2dadf9d8ca5377d08dabe3c"
+                "url": "https://github.com/workerman-php/coroutine.git",
+                "reference": "df8fc428967d512a74a8a7d80355c1d40228c9fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/webman-framework/zipball/7af37a5351c80e79f2dadf9d8ca5377d08dabe3c",
-                "reference": "7af37a5351c80e79f2dadf9d8ca5377d08dabe3c",
+                "url": "https://api.github.com/repos/workerman-php/coroutine/zipball/df8fc428967d512a74a8a7d80355c1d40228c9fa",
+                "reference": "df8fc428967d512a74a8a7d80355c1d40228c9fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.0",
+                "psr/log": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Workerman\\": "src",
+                    "Workerman\\Coroutine\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Workerman coroutine",
+            "support": {
+                "issues": "https://github.com/workerman-php/coroutine/issues",
+                "source": "https://github.com/workerman-php/coroutine/tree/v1.1.3"
+            },
+            "time": "2025-02-17T03:34:21+00:00"
+        },
+        {
+            "name": "workerman/webman-framework",
+            "version": "v2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/walkor/webman-framework.git",
+                "reference": "f803bd867f07bb0929faef060b59a19a44186bfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/walkor/webman-framework/zipball/f803bd867f07bb0929faef060b59a19a44186bfc",
+                "reference": "f803bd867f07bb0929faef060b59a19a44186bfc",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "nikic/fast-route": "^1.3",
-                "php": ">=7.2",
+                "php": ">=8.1",
                 "psr/container": ">=1.0",
-                "workerman/workerman": "^4.0.4 || ^5.0.0"
+                "psr/log": "^3.0",
+                "workerman/workerman": "^5.1 || dev-master"
             },
             "suggest": {
                 "ext-event": "For better performance. "
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "./src/support/helpers.php"
+                ],
                 "psr-4": {
                     "Webman\\": "./src",
                     "Support\\": "./src/support",
@@ -1760,24 +1597,35 @@
                 "source": "https://github.com/walkor/webman-framework",
                 "wiki": "https://doc.workerman.net/"
             },
-            "time": "2023-03-28T05:04:49+00:00"
+            "time": "2025-03-10T11:52:22+00:00"
         },
         {
             "name": "workerman/workerman",
-            "version": "v4.1.9",
+            "version": "v5.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/workerman.git",
-                "reference": "1f92d02c26106b5fbe6f61ea776198aad6e426f7"
+                "reference": "371f3a5decb28f1bd3464ae26d47ea1a4cf0a3c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/workerman/zipball/1f92d02c26106b5fbe6f61ea776198aad6e426f7",
-                "reference": "1f92d02c26106b5fbe6f61ea776198aad6e426f7",
+                "url": "https://api.github.com/repos/walkor/workerman/zipball/371f3a5decb28f1bd3464ae26d47ea1a4cf0a3c5",
+                "reference": "371f3a5decb28f1bd3464ae26d47ea1a4cf0a3c5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "ext-json": "*",
+                "php": ">=8.1",
+                "workerman/coroutine": "^1.1 || dev-main"
+            },
+            "conflict": {
+                "ext-swow": "<v1.0.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^7.0",
+                "mockery/mockery": "^1.6",
+                "pestphp/pest": "2.x-dev",
+                "phpstan/phpstan": "1.11.x-dev"
             },
             "suggest": {
                 "ext-event": "For better performance. "
@@ -1785,7 +1633,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Workerman\\": "./"
+                    "Workerman\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1796,22 +1644,24 @@
                 {
                     "name": "walkor",
                     "email": "walkor@workerman.net",
-                    "homepage": "http://www.workerman.net",
+                    "homepage": "https://www.workerman.net",
                     "role": "Developer"
                 }
             ],
             "description": "An asynchronous event driven PHP framework for easily building fast, scalable network applications.",
-            "homepage": "http://www.workerman.net",
+            "homepage": "https://www.workerman.net",
             "keywords": [
                 "asynchronous",
-                "event-loop"
+                "event-loop",
+                "framework",
+                "http"
             ],
             "support": {
                 "email": "walkor@workerman.net",
-                "forum": "http://wenda.workerman.net/",
+                "forum": "https://www.workerman.net/questions",
                 "issues": "https://github.com/walkor/workerman/issues",
                 "source": "https://github.com/walkor/workerman",
-                "wiki": "http://doc.workerman.net/"
+                "wiki": "https://www.workerman.net/doc/workerman/"
             },
             "funding": [
                 {
@@ -1823,18 +1673,18 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-03-10T13:59:12+00:00"
+            "time": "2025-06-12T13:34:04+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {},
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2"
+        "php": ">=8.1"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

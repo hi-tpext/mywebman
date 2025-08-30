@@ -5,29 +5,30 @@
     "high performance",
     "http service"
   ],
-  "homepage": "http://www.workerman.net",
+  "homepage": "https://www.workerman.net",
   "license": "MIT",
   "description": "High performance HTTP Service Framework.",
   "authors": [
     {
       "name": "walkor",
       "email": "walkor@workerman.net",
-      "homepage": "http://www.workerman.net",
+      "homepage": "https://www.workerman.net",
       "role": "Developer"
     }
   ],
   "support": {
     "email": "walkor@workerman.net",
     "issues": "https://github.com/walkor/webman/issues",
-    "forum": "http://wenda.workerman.net/",
-    "wiki": "http://workerman.net/doc/webman",
+    "forum": "https://wenda.workerman.net/",
+    "wiki": "https://workerman.net/doc/webman",
     "source": "https://github.com/walkor/webman"
   },
   "require": {
-    "php": ">=7.2",
-    "workerman/webman-framework": "^1.4.6",
+    "php": ">=8.1",
+    "workerman/webman-framework": "^2.1",
     "monolog/monolog": "^2.0",
-    "ichynul/tpextmyadmin": "^4.1.1",
+    "ichynul/tpextmyadmin": "^4.5.1",
+    "ichynul/tpext-tinyvue": "^5.1.8",
     "ichynul/tpextareacity": "^1.2"
   },
   "suggest": {
@@ -36,13 +37,12 @@
   "autoload": {
     "psr-4": {
       "": "./",
-      "App\\": "./app"
+      "app\\": "./app",
+      "App\\": "./app",
+      "app\\View\\Components\\": "./app/view/components"
     },
-    "files": [
-      "./support/helpers.php"
-    ],
     "psr-0": {
-        "": "extend/"
+      "": "extend/"
     }
   },
   "scripts": {
@@ -55,5 +55,7 @@
     "pre-package-uninstall": [
       "support\\Plugin::uninstall"
     ]
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

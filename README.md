@@ -14,17 +14,12 @@
 
 ### 方式一、使用 `composer` 全新安装
 
-安装 [webman] 和 [tpextmyadmin] https://github.com/hi-tpext/tpextmyadmin/tree/4.0 / 4.5
+安装 [webman]v2 和 [tpextmyadmin] https://github.com/hi-tpext/tpextmyadmin/tree/4.5
 
 ```bash
-composer create-project workerman/webman mywebman
+composer create-project workerman/webman:~2.0 mywebman
 
 cd mywebman
-
-# 版本webman 1.6以下使用[tpext-myadmin] 4.0分支
-composer require ichynul/tpextmyadmin:^4.0.6
-
-```
 
 ```bash
 
@@ -36,9 +31,9 @@ composer require ichynul/tpextmyadmin:^4.5.1
 
 composer require ichynul/tpextbuilder:^3.9.1
 或
-composer require ichynul/tpext-vexipui:^5.0.5
+composer require ichynul/tpext-vexipui
 或
-composer require ichynul/tpext-tinyvue:^5.1.8
+composer require ichynul/tpext-tinyvue
 
 #更多说明 见 https://github.com/hi-tpext/tpext-myadmin/tree/4.5
 ```
@@ -58,10 +53,30 @@ cd mywebman
 
 composer update
 ```
+---
 
-此版本为1.4.x可升级到1.6.x
+### 运行
 
-升级到 2.1.x，需要一些改动，见https://www.workerman.net/doc/webman/upgrade/2-1.html
+#### windows用户
+
+双击 windows.bat 或者运行 `php windows.php` 启动
+
+#### linux用户
+
+调试方式运行（用于开发调试，打印数据会显示在终端，终端关闭后webman服务也随之关闭）
+
+```bash
+php start.php start
+```
+
+守护进程方式运行（用于正式环境，打印数据不会显示在终端，终端关闭后webman服务会持续运行）
+
+```bash
+php start.php start -d
+```
+
+#### 提示
+如果有报错，很可能是有函数被禁用，参考函数禁用检查解除禁用
 
 ---
 
@@ -71,9 +86,9 @@ composer update
 
 > 注意：此方式的仓库是不带`composer`依赖`vendor`目录的，请务必运行`composer update`安装所有依赖后再访问网站。
 
-## webman1.4.x / 1.5.x / 1.6.x
+#### 控制器后缀
 
-新版本默认开启控制器后缀：`'controller_suffix' => 'Controller',`
+默认开启控制器后缀：`'controller_suffix' => 'Controller',`
 
 请关闭它，在`config/app.php`中修改为：
 
@@ -81,7 +96,7 @@ composer update
 
 ## 二、配置
 
-- 在`/config/thinkorm.php`中配置数据库，或在网页中配置[见下一步]
+- 在`/config/think-orm.php`中配置数据库，或在网页中配置[见下一步]
 
 ## 三、扩展安装
 
@@ -91,9 +106,11 @@ composer update
 
 3. 手动安装 [`tpext.myadmin`]，确保此扩展优先，以支持其他扩展的后台菜单创建
 
-    默认账号：`admin`：`tpextadmin`
+    默认账号：
+    账号：`admin`
+    密码：`tpextadmin`
 
-    安装成功后自动创建id为1的超级管理员，并处于登录状态。
+安装成功后自动创建id为1的超级管理员，并处于登录状态。
 
 4. 手动安装其余装扩展
 
@@ -145,10 +162,10 @@ extend扩展基于`composer.josn`配置
 ### 主要扩展依赖
 
 - [tpext] <https://www.gitlink.org.cn/hi-tpext/tpext> 扩展核心
-- [tpextbuilder] <https://www.gitlink.org.cn/hi-tpext/tpextbuilder> UI 生成器
-- [tpextmanager] <https://www.gitlink.org.cn/hi-tpext/tpextmanager> 管理工具
-- [lightyearadmin]<https://www.gitlink.org.cn/hi-tpext/lightyearadmin> 基础样式库
-- [tpextmyadmin] <https://www.gitlink.org.cn/hi-tpext/tpextmyadmin> 集成后台基础功能：权限、设置等
+- [tpextbuilder] <https://www.gitlink.org.cn/hi-tpext/tpextb-uilder> UI 生成器
+- [tpextmanager] <https://www.gitlink.org.cn/hi-tpext/tpext-manager> 管理工具
+- [lightyearadmin]<https://www.gitlink.org.cn/hi-tpext/lightyear-admin> 基础样式库
+- [tpextmyadmin] <https://www.gitlink.org.cn/hi-tpext/tpext-myadmin> 集成后台基础功能：权限、设置等
 - [更多] <https://www.gitlink.org.cn/hi-tpext/extensions/tree/main/extensions.json> 查看全部扩展介绍
 
 2.`tpextbuilder`UI模块基于`bootstrap`和`Light-Year-Admin-Template`的后台模板， 封装了大部分常用组件 ：
