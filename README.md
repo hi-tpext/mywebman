@@ -141,7 +141,7 @@ extend扩展基于`composer.josn`配置
 
 ### 网址
 
-暂无...
+https://yes.shenzhuo.vip/admin
 
 ### 账号
 
