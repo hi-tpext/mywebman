@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f035c4133ab97c4a7fb2926bcf8693f0",
+    "content-hash": "3b69002689b0284d4f97f33aff3f560a",
     "packages": [
         {
             "name": "guzzlehttp/psr7",
@@ -266,16 +266,16 @@
         },
         {
             "name": "ichynul/tpext-tinyvue",
-            "version": "5.1.8",
+            "version": "5.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hi-tpext/tpext-tinyvue.git",
-                "reference": "6400fa2e18d148bd7aaae9d811c2f6a51e803ec4"
+                "reference": "4a990a045f6ebfb66d69fa9568bf40e5b3263c2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpext-tinyvue/zipball/6400fa2e18d148bd7aaae9d811c2f6a51e803ec4",
-                "reference": "6400fa2e18d148bd7aaae9d811c2f6a51e803ec4",
+                "url": "https://api.github.com/repos/hi-tpext/tpext-tinyvue/zipball/4a990a045f6ebfb66d69fa9568bf40e5b3263c2e",
+                "reference": "4a990a045f6ebfb66d69fa9568bf40e5b3263c2e",
                 "shasum": ""
             },
             "require": {
@@ -314,9 +314,53 @@
             ],
             "support": {
                 "issues": "https://github.com/hi-tpext/tpext-tinyvue/issues",
-                "source": "https://github.com/hi-tpext/tpext-tinyvue/tree/5.1.8"
+                "source": "https://github.com/hi-tpext/tpext-tinyvue/tree/5.2.5"
             },
-            "time": "2025-06-25T05:30:04+00:00"
+            "time": "2025-08-25T02:27:02+00:00"
+        },
+        {
+            "name": "ichynul/tpextareacity",
+            "version": "1.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/tpext-areacity.git",
+                "reference": "dc97d187b93783da1a0b921873f697b137f31375"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpext-areacity/zipball/dc97d187b93783da1a0b921873f697b137f31375",
+                "reference": "dc97d187b93783da1a0b921873f697b137f31375",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "./helper.php"
+                ],
+                "psr-4": {
+                    "tpext\\areacity\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://www.ynyysc.com/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpext-areacity/issues",
+                "source": "https://github.com/hi-tpext/tpext-areacity/tree/1.2.5"
+            },
+            "time": "2024-08-06T05:41:22+00:00"
         },
         {
             "name": "ichynul/tpextmanager",
@@ -374,16 +418,16 @@
         },
         {
             "name": "ichynul/tpextmyadmin",
-            "version": "4.5.1",
+            "version": "4.5.53",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hi-tpext/tpext-myadmin.git",
-                "reference": "49253f234aa516c96ffdeb585f3d4592af8c48cc"
+                "reference": "fe4f41bd3c9f6a7838d2ffac717f369e4ad7c59b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hi-tpext/tpext-myadmin/zipball/49253f234aa516c96ffdeb585f3d4592af8c48cc",
-                "reference": "49253f234aa516c96ffdeb585f3d4592af8c48cc",
+                "url": "https://api.github.com/repos/hi-tpext/tpext-myadmin/zipball/fe4f41bd3c9f6a7838d2ffac717f369e4ad7c59b",
+                "reference": "fe4f41bd3c9f6a7838d2ffac717f369e4ad7c59b",
                 "shasum": ""
             },
             "require": {
@@ -420,7 +464,7 @@
             ],
             "support": {
                 "issues": "https://github.com/hi-tpext/tpext-myadmin/issues",
-                "source": "https://github.com/hi-tpext/tpext-myadmin/tree/4.5.1"
+                "source": "https://github.com/hi-tpext/tpext-myadmin/tree/4.5.53"
             },
             "funding": [
                 {
@@ -428,7 +472,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-28T03:17:02+00:00"
+            "time": "2025-08-08T02:24:29+00:00"
         },
         {
             "name": "intervention/image",
