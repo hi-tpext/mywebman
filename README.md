@@ -24,12 +24,12 @@ cd mywebman
 ```bash
 
 # 版本webman 2.0以上使用[tpext-myadmin] 4.5分支
-composer require ichynul/tpextmyadmin:^4.5.1
+composer require ichynul/tpextmyadmin:~4.5
 
 #4.5分支版本不带 UI依赖 tpextbuilder
 #需要选择安装一个：
 
-composer require ichynul/tpextbuilder:^3.9.1
+composer require ichynul/tpextbuilder:~3.9
 或
 composer require ichynul/tpext-vexipui
 或
